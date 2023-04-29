@@ -223,19 +223,19 @@
 	    padding: 12px 15px;
 	}
 
-	.homepage #content .styled-table tbody tbody  {
+	.homepage #content .styled-table tbody tr  {
 	    border-bottom: 1px solid #dddddd;
 	}
 
-	.homepage #content .styled-table  tbody:nth-of-type(even) {
+	.homepage #content .styled-table tbody  tr:nth-of-type(even) {
 	    background-color: #f3f3f3;
 	}
 
-	.homepage #content .styled-table  tbody:last-of-type {
+	.homepage #content .styled-table tbody  tr:last-of-type {
 	    border-bottom: 2px solid #009879;
 	}
 
-	.homepage #content .styled-table  tbody:hover {
+	.homepage #content .styled-table  tr:hover {
 	    font-weight: italic;
 	    color: #009879;
 	}
