@@ -104,6 +104,12 @@
     color: #009879;
 }
 
+.icon {
+  content: url("https://media.giphy.com/media/PAbELXsl2P7mE/giphy.gif");
+  height: 40px;
+  width: 40px;
+}
+
 	#sidebar h2
 	{
 		font-size: 2.4em;
