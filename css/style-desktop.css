@@ -57,9 +57,15 @@
 
 	.homepage #content header h2
 	{
-		
+
 		padding: 1em;
 		font-size: 2.2em;
+	}
+
+	.homepage #content
+	{
+		padding: 1em;
+		font-size: 1.4em;
 	}
 
 	#sidebar h2
