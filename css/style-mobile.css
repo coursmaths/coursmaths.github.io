@@ -197,13 +197,13 @@
 
 	#main
 	{
-		margin: 4em;
+
 		padding: 4em 0em 2em 0em;
 	}
 
 	.homepage #content header h2
 	{
-		padding: 0.70em 0em;
+		padding: 1em;
 		font-size: 1.4em;
 	}
 
