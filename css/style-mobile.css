@@ -203,6 +203,12 @@
 
 	.homepage #content header h2
 	{
+		padding: 0.70em 0em;
+		font-size: 1.4em;
+	}
+
+	.homepage #content
+	{
 		padding: 1em;
 		font-size: 1.4em;
 	}
