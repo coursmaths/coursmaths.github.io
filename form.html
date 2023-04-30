@@ -11,8 +11,11 @@
 		<script type="text/javascript">
 		window.addEventListener("load", function() {
   const form = document.getElementById('form');
+
   form.addEventListener("submit", async function(e) {
     document.querySelector("#submit").disabled = true;
+		const spinner = document.getElementById('html-spinner');
+		spinner.style.visibility = 'visible';
 		console.log("hi")
     e.preventDefault();
     const data = new FormData(form);
@@ -21,16 +24,16 @@
 }
     const action = e.target.action;
 		console.log(e.target.action)
-    const response = await fetch(action, {
+    const response =  fetch(action, {
       method: "POST",
 			body: data
-    });
+    })
+		.then(() => {
+			form.style.display = 'none';
+		document.getElementById("aftersubmit").style.visibility = 'visible';}
+	);
 
-		form.style.display = 'none';
-		document.getElementById("aftersubmit").style.visibility = 'visible'
 
-
-		console.log("Download complete", response);
   });
 });
 </script>
@@ -94,12 +97,15 @@
 		  <input name="email" type="email" id="email" type="text" placeholder="E-MAIL" required>
 		  <textarea name="message" id="message" type="text" placeholder="MESSAGE"></textarea>
   <input id="submit" type="submit" >
+	<div id="html-spinner" style = "visibility:hidden"></div>
 
 </form>
-<div style = "visibility:hidden" id = "aftersubmit">
+<div style = "visibility:hidden" id = "aftersubmit" text-align='center' >
     <p>Votre message a bien été envoyé, merci.</p>
 		<a href="index.html"  aria-hidden="true" ><span>Revenir à la page d'accueil.</span></a></li>
 </div>
+
+
 			</div>
 		</div>
 

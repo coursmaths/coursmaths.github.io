@@ -264,6 +264,12 @@
   margin: 50px auto 100px auto;
 }
 
+.homepage #content #aftersubmit {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
 .homepage #content input {
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
