@@ -26,6 +26,10 @@
 			body: data
     });
 
+		form.style.display = 'none';
+		document.getElementById("aftersubmit").style.visibility = 'visible'
+
+
 		console.log("Download complete", response);
   });
 });
@@ -92,6 +96,10 @@
   <input id="submit" type="submit" >
 
 </form>
+<div style = "visibility:hidden" id = "aftersubmit">
+    <p>Votre message a bien été envoyé, merci.</p>
+		<a href="index.html"  aria-hidden="true" ><span>Revenir à la page d'accueil.</span></a></li>
+</div>
 			</div>
 		</div>
 
