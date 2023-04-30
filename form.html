@@ -8,6 +8,30 @@
 <html>
 	<head>
 		<title>Cours Mathématiques Paris Vincennes</title>
+		<script type="text/javascript">
+		window.addEventListener("load", function() {
+  const form = document.getElementById('form');
+  form.addEventListener("submit", function(e) {
+    document.querySelector("#submit").disabled = true;
+		console.log("hi")
+    e.preventDefault();
+    const data = new FormData(form);
+		for(var pair of data.entries()) {
+   console.log(pair[0]+ ', '+ pair[1]);
+}
+    const action = e.target.action;
+		console.log(e.target.action)
+    fetch(action, {
+      method: 'POST',
+			mode: 'cors',
+      body: data,
+    })
+    .then(() => {
+      alert("Success!");
+    })
+  });
+});
+</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="javascripts/skel.min.js"></script>
 		<script src="javascripts/skel-panels.min.js"></script>
@@ -60,78 +84,16 @@
 		<div id="main">
 			<div id="content" class="container">
 
-				<p>Je donne des cours particuliers à domicile en mathématiques et physique-chimie, niveau lycée et enseignement supérieur.
-					J'ai plus de 10 ans d'expérience dans les cours particuliers et l'enseignement,
-					des résultats probants, un bon contact avec les élèves et une pédagogie adaptée en fonction du profil de l'élève.
-					Je m'adresse aux élèves en difficulté aussi bien qu'aux élèves souhaitant se perfectionner en vue d'études exigeantes.</p>
+				<header>Contact</header>
 
-<p>J'aime les Mathématiques et j'aime transmettre cette passion.</p>
+<form id="form" class="topBefore" method="POST" action="https://script.google.com/macros/s/AKfycbyA4mqhyFI3fpK3c7iPlQCdcEDc97gtqFkMm2i4Ve3T7HExqhENPNiLAyolo29SHbEA/exec/">
 
-<p>J'ai une formation d'Ingénieur SUPELEC (aujourd'hui CentraleSupelec), j'ai effectué mes classes préparatoires MP* au lycée Thiers à Marseille.</p>
+		  <input name="Name" type="name" id="name" type="text" placeholder="NAME" required>
+		  <input name="Email" type="email" id="email" type="text" placeholder="E-MAIL" required>
+		  <textarea name="Message" id="Message" type="text" placeholder="MESSAGE"></textarea>
+  <input id="submit" type="submit" >
 
-<table class="styled-table">
-    <thead>
-        <tr>
-            <th>Niveau</th>
-            <th>Tarif horaire</th>
-        </tr>
-    </thead>
-    <tbody>
-
-        <tr >
-            <td>Lycée</td>
-            <td>45 €</td>
-        </tr>
-
-        <tr >
-            <td>Supérieur</td>
-            <td>60 €</td>
-        </tr>
-    </tbody>
-</table>
-
-<p>Possibilité de bénéficier d'un crédit d'impôt de 50%, sur le montant de l'heure de cours, pour un forfait de 5 fois 2 heures.
- Les foyers non imposables peuvent aussi bénéficier de ce crédit d'impôt.</p>
-
- <table class="styled-table">
-     <thead>
-         <tr>
-             <th>Niveau</th>
-             <th>Tarif horaire après déduction fiscale annuelle</th>
-         </tr>
-     </thead>
-     <tbody>
-
-         <tr>
-             <td>Lycée</td>
-             <td>22.50 €</td>
-         </tr>
-
-         <tr>
-             <td>Supérieur</td>
-             <td>30 €</td>
-         </tr>
-     </tbody>
- </table>
-
-<p>cours webcam possible.</p>
-
-<p>Site github avec mon travail relatif au mathématiques - programmation:
-<a href="https://github.com/pptacher">https://github.com/pptacher</a></p>
-
-<p>J'habite à Vincennes et me déplace Paris, petite couronne voire au-delà.</p>
-<p>N'hésitez pas à me contacter par <a href="mailto:cours.maths.vincennes@gmail.com" target="_blank">email</a> ou via <a href="https://www.superprof.fr/ingenieur-supelec-donne-cours-mathematiques-physique-chimie-secondaire-euros-enseignement-superieur-euros.html" target="_blank">Superprof</a>  pour tout renseignement et demande de cours.</p>
-
-<p>+10 ans d’expérience dans l'enseignement.
-Élèves suivis sur le long terme, jusqu’à 3 années scolaires.</p>
-
-<p>College et Lycée (Mathématiques, Physique Chimie)</p>
-
-<p>Enseignement supérieur: Ecole d'ingénieurs, Prépas MP PC HEC PSI BCPST, université...  (Mathématiques).</p>
-				<!--<span style="white-space: pre-line">fastslam C++ application is running asynchronously, streaming the positions of 150 particles to node.js server.
-				The data is then send through sockets to client.
-				Use swipe and pinch to translate and zoom in/out.
-			</span>-->
+</form>
 			</div>
 		</div>
 
@@ -155,7 +117,7 @@
 					<ul class="contact">
 						<li><a href="https://github.com/pptacher" class="fa fa-github" target="_blank"><span>Github</span></a></li>
 						<li><a href="https://twitter.com/coursmathsparis" class="fa fa-twitter" target="_blank"><span>Twitter</span></a></li>
-						<li><a href="form.html" class="fa fa-envelope" aria-hidden="true" ><span>Mail</span></a></li>
+						<li><a href="form.html" class="fa fa-envelope" aria-hidden="true"><span>Mail</span></a></li>
 					</ul>
 				</section>
 			</div>
