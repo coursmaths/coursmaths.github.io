@@ -23,7 +23,7 @@
 			body: data
     })
 		.then(() => {
-			//form.style.display = 'none';
+		form.style.visibility = 'hidden';
 		document.getElementById("aftersubmit").style.visibility = 'visible';}
 	);
 
@@ -94,7 +94,7 @@
 	<div id="html-spinner" style = "visibility:hidden"></div>
 
 </form>
-<div style = "visibility:hidden" id = "aftersubmit" text-align='center' position='absolute' top=0 >
+<div style = "visibility:hidden" id = "aftersubmit" text-align='center' position='absolute' top=0px >
     <p>Votre message a bien été envoyé, merci.</p>
 		<a href="index.html"  aria-hidden="true" ><span>Revenir à la page d'accueil.</span></a></li>
 </div>
