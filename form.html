@@ -1,148 +1,369 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Cours Mathématiques Paris Vincennes</title>
-		<script type="text/javascript">
-		window.addEventListener("load", function() {
-  const form = document.getElementById('form');
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+    <script src="https://kit.fontawesome.com/6b81810417.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    window.addEventListener("load", function() {
+    const form = document.getElementById('form');
 
-  form.addEventListener("submit", async function(e) {
-    document.querySelector("#submit").disabled = true;
-		form.style.visibility = 'hidden';
-		document.getElementById('chdr').style.visibility = "hidden";
-		const spinner = document.getElementById('html-spinner');
-		spinner.style.visibility = 'visible';
-		console.log("hi")
-    e.preventDefault();
-    const data = new FormData(form);
-		for(var pair of data.entries()) {
-   console.log(pair[0]+ ', '+ pair[1]);
-}
-    const action = e.target.action;
-		console.log(e.target.action)
-    const response =  fetch(action, {
-      method: "POST",
-			body: data
-    })
-		.then(() => {
-		form.style.visibility = 'hidden';
-		spinner.style.visibility = 'hidden';
-		document.getElementById('chdr').style.visibility = "hidden";
-		document.getElementById("aftersubmit").style.position = 'absolute';
-		document.getElementById("aftersubmit").style.top = '20%';
-		document.getElementById("aftersubmit").style.visibility = 'visible';}
-	);
+    form.addEventListener("submit", async function(e) {
+      document.querySelector("#submit").disabled = true;
+      form.style.visibility = 'hidden';
+      document.getElementById('chdr').style.visibility = "hidden";
+      const spinner = document.getElementById('html-spinner');
+      spinner.style.visibility = 'visible';
+      console.log("hi")
+      e.preventDefault();
+      const data = new FormData(form);
+      for(var pair of data.entries()) {
+        console.log(pair[0]+ ', '+ pair[1]);
+      }
+      const action = e.target.action;
+      console.log(e.target.action)
+      const response =  fetch(action, {
+        method: "POST",
+        body: data
+      })
+      .then(() => {
+        form.style.visibility = 'hidden';
+        spinner.style.visibility = 'hidden';
+        document.getElementById('chdr').style.visibility = "hidden";
+        document.getElementById("aftersubmit").style.position = 'relative';
+        document.getElementById("aftersubmit").style.top = '20%';
+        document.getElementById("aftersubmit").style.visibility = 'visible';});
+      }); 
+    });
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Blog Template · Bootstrap v5.3</title>
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
 
-  });
-});
-</script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="javascripts/skel.min.js"></script>
-		<script src="javascripts/skel-panels.min.js"></script>
-		<script src="javascripts/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-		</noscript>
-		<script src="https://kit.fontawesome.com/6b81810417.js" crossorigin="anonymous"></script>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="viewport" content="user-scalable=no, width=device-width, minimum-scale=1.0 , initial-scale=1.0, maximum-scale=1.0" />
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,500,900' rel='stylesheet' type='text/css'>
-	</head>
-	<body class="homepage">
+    
 
-	<!-- Header -->
-		<div id="header">
-			<div id="nav-wrapper">
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<!--<li class="active"><a href="index.html">Homepage</a></li>
-						<li><a href="left-sidebar.html">Left Sidebar</a></li>
-						<li><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li><a href="no-sidebar.html">No Sidebar</a></li>-->
-					</ul>
-				</nav>
-			</div>
-			<div class="container">
+    
 
-				<!-- Logo -->
-				<div id="logo">
-					<h2><a href="index.html">Cours Mathématiques</a></h2>
-					<span class="tag">Paris Vincennes</span>
-				</div>
-			</div>
-		</div>
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
-	<!-- Featured -->
-		<div id="featured">
-			<div class="container">
-				<p>Visiter ma page github<a href="http://github.com/pptacher" class="fa fa-github" target="_blank"><span></span></a> </p>
-				<!--<hr />-->
-			</div>
-		</div>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-	<!-- Main -->
-		<div id="main">
-			<div id="content" class="container">
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
 
-				<header id="chdr">Contact</header>
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
-<form id="form" class="topBefore" position=absolute method="POST" action="https://script.google.com/macros/s/AKfycbyA4mqhyFI3fpK3c7iPlQCdcEDc97gtqFkMm2i4Ve3T7HExqhENPNiLAyolo29SHbEA/exec">
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
 
-		  <input name="name" type="name" id="name" type="text" placeholder="NAME" required>
-		  <input name="email" type="email" id="email" type="text" placeholder="E-MAIL" required>
-		  <textarea name="message" id="message" type="text" placeholder="MESSAGE"></textarea>
-  <input id="submit" type="submit" >
-	<div id="html-spinner" style = "visibility:hidden"></div>
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
 
-</form>
-<div style = "visibility:hidden" id = "aftersubmit" text-align='center' position='absolute' top=0>
-    <p>Votre message a bien été envoyé, merci.</p>
-		<a href="index.html"  aria-hidden="true"  ><span>Retour.</span></a></li>
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<div class="container">
+  <header class="blog-header lh-1 py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+     <!-- <div class="col-4 pt-1">
+        <a class="link-secondary" href="#">Subscribe</a>
+      </div>-->
+      <div class="col-12 text-center">
+        <a class="blog-header-logo text-body-emphasis" href="index.html">Maths Paris Vincennes</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <!--<a class="link-secondary" href="#" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>-->
+      </div>
+    </div>
+  </header>
+
+  <!--<div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#">World</a>
+      <a class="p-2 link-secondary" href="#">U.S.</a>
+      <a class="p-2 link-secondary" href="#">Technology</a>
+      <a class="p-2 link-secondary" href="#">Design</a>
+      <a class="p-2 link-secondary" href="#">Culture</a>
+      <a class="p-2 link-secondary" href="#">Business</a>
+      <a class="p-2 link-secondary" href="#">Politics</a>
+      <a class="p-2 link-secondary" href="#">Opinion</a>
+      <a class="p-2 link-secondary" href="#">Science</a>
+      <a class="p-2 link-secondary" href="#">Health</a>
+      <a class="p-2 link-secondary" href="#">Style</a>
+      <a class="p-2 link-secondary" href="#">Travel</a>
+    </nav>
+  </div>-->
 </div>
 
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark" >
+    <div class="col-md-6 px-0" background='url(../header.jpg)'>
+      <h1 class="display-4 fst-italic">Cours de mathématiques</h1>
+      <p class="lead my-3">Je donne des cours particuliers à domicile en mathématiques et physique-chimie, niveau lycée et enseignement supérieur.</p>
+      <p class="lead mb-0"><a href="index.html#présentation" class="text-white fw-bold">Continuer la lecture...</a></p>
+    </div>
+  </div>
 
-			</div>
-		</div>
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" >
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Concours Mines-Ponts</strong>
+          <h3 class="mb-0">mathématiques 1 PC</h3>
+          <div class="mb-1 text-body-secondary">2 Mai</div>
+          <p class="card-text mb-auto">Le corrigé du sujet du 2 Mai sur la convexité.</p>
+          <a href="index.html#maths1pcmp23" class="stretched-link">Continuer la lecture</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Concours Mines-Ponts</strong>
+          <h3 class="mb-0">mathématiques 2 PC</h3>
+          <div class="mb-1 text-body-secondary">8 Mai</div>
+          <p class="mb-auto">Le sujet sur les chaînes de Markov en temps continu.</p>
+          <a href="index.html#maths2pcmp23" class="stretched-link">Continuer la lecture</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>
+        </div>
+      </div>
+    </div>
+  </div>
 
-		<!-- Tweet -->
-			<div id="tweet">
-				<div class="container">
-					<section>
-						<blockquote>&ldquo;Ο το μεν σώμα υγιής, την δε ψυχήν εύπορος, την δε φύσιν ευπαίδευτος.&rdquo;</blockquote>
-					</section>
-				</div>
-			</div>
+  <div class="row g-5">
+    <div class="col-md-8">
+      
+
+            <article class="blog-post">
+        <h2 class="blog-post-title mb-1"></h2>
+        <p class="blog-post-meta"> <a href="#"></a></p>
+        <h2 class="pb-4 mb-4 fst-italic border-bottom" id="chdr">
+        Contact
+      </h2>
+
+         <form id="form" class="topBefore" position=absolute method="POST" action="https://script.google.com/macros/s/AKfycbyA4mqhyFI3fpK3c7iPlQCdcEDc97gtqFkMm2i4Ve3T7HExqhENPNiLAyolo29SHbEA/exec">
+
+      <input name="name" type="name" id="name" type="text" placeholder="NAME" required>
+      <input name="email" type="email" id="email" type="text" placeholder="E-MAIL" required>
+      <textarea name="message" id="message" type="text" placeholder="MESSAGE"></textarea>
+  <input id="submit" type="submit" >
+  <div id="html-spinner" style = "visibility:hidden"></div>
+
+</form>
+<div style = "visibility:hidden" id = "aftersubmit" text-align='center' position='relative' top=0>
+    <p>Votre message a bien été envoyé, merci.</p>
+    <a href="index.html"  aria-hidden="true"  ><span>Retour.</span></a></li>
+</div>
+      </article>
+
+     
+
+     </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded">
+          <h4 class="fst-italic">A propos</h4>
+          <p class="mb-0">Bienvenue sur mon site ! Je vais y poster au fur et à mesure des contenus pédagogiques.</p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+         <!-- <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>-->
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Ailleurs</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://github.com/pptacher" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/coursmathsparis"target="_blank">Twitter</a></li>
+            <li><a href="https://www.superprof.fr/ingenieur-supelec-donne-cours-mathematiques-physique-chimie-secondaire-euros-enseignement-superieur-euros.html" target="_blank">Superprof</a></li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div class="container-fluid tweet text-center">
+  <div class="row"><blockquote>&ldquo;Ο το μεν σώμα υγιής, την δε ψυχήν εύπορος, την δε φύσιν ευπαίδευτος.&rdquo;</blockquote></div>
+</div>
+
+<footer class="blog-footer">
+          <section>
+          <header>
+            <h3>Contact</h3>
+          </header>
+          <ul class="contact">
+            <li><a href="https://github.com/pptacher" class="fa fa-github" target="_blank"><span>Github</span></a></li>
+            <li><a href="https://twitter.com/coursmathsparis" class="fa fa-twitter" target="_blank"><span>Twitter</span></a></li>
+            <li><a href="form.html" class="fa fa-envelope" aria-hidden="true" ><span>Mail</span></a></li>
+                        <!--<<li><a href="form.html" class="fab fa-discord" aria-hidden="true" ><span>Mail</span></a></li>-->
+          </ul>
+        </section>
+  <p>Images: <a href="http://unsplash.com">Unsplash</a> (<a href="https://unsplash.com/@waqvr?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Waqar</a>)</p>
+  <p>
+    <a href="#">Back to top</a>
+  </p>
+</footer>
 
 
-	<!-- Footer -->
-		<div id="footer">
-			<div class="container">
-				<section>
-					<header>
-						<h3>Contact</h3>
-					</header>
-					<ul class="contact">
-						<li><a href="https://github.com/pptacher" class="fa fa-github" target="_blank"><span>Github</span></a></li>
-						<li><a href="https://twitter.com/coursmathsparis" class="fa fa-twitter" target="_blank"><span>Twitter</span></a></li>
-						<li><a href="form.html" class="fa fa-envelope" aria-hidden="true" ><span>Mail</span></a></li>
-												<li><a href="form.html" class="fab fa-discord" aria-hidden="true" ><span>Mail</span></a></li>
-					</ul>
-				</section>
-			</div>
-		</div>
+    
+  </body>
+      <script>
+        document.querySelectorAll(".collapsible").forEach(function(current) {
 
-	<!-- Copyright -->
-		<div id="copyright">
-			<div class="container">
-				HTML/CSS Design: <a href="http://templated.co" target="_blank">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="https://unsplash.com/@waqvr?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank">Waqar</a>)
-			</div>
-		</div>
+    let toggler = document.createElement("div");
+    toggler.className = "toggler";
+    current.appendChild(toggler);
 
-	</body>
+    toggler.addEventListener("click", function(e) {
+      current.classList.toggle("open");
+    }, false);
+
+  });
+    </script>
 </html>
