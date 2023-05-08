@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 .tweet {
 position: relative;
   
-  background: url(../blog/header.jpg) no-repeat center center;
+  background: url(header.jpg) no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
 
