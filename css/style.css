@@ -7,6 +7,16 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
+h1 { 
+  display: block;
+  font-size: 1.3em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 500;
+}
+
 	body
 	{
 		margin: 0em;
@@ -23,7 +33,7 @@
 		color: #777;
 	}
 
-	h1,h2,h3,h4,h5,h6
+	h2,h3,h4,h5,h6
 	{
 		font-weight: 300;
 		color: #777;
