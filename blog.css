@@ -265,6 +265,17 @@ position: relative;
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+.blog-footer  a span {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-footer a {
+  text-decoration: none;
+}
+
+
 
 
 /*
