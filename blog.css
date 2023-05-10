@@ -17,6 +17,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
 }
 
+ a {
+  color: rgb(50, 104, 145);
+  text-decoration: none;
+}
+
+ a:hover {
+  color: rgb(50, 104, 145);
+  text-decoration: underline;
+}
+
 .display-4 {
   font-size: 2.5rem;
 }
@@ -32,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .h-250 { height: 250px; }
 @media (min-width: 768px) {
-  .h-md-250 { height: 250px; }
+  .h-md-250 { height: 250px; } 
 }
 
 /* Pagination */
@@ -53,6 +63,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.25rem;
   color: #727272;
 }
+
+
 
 
 .tweet {
