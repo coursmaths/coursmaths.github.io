@@ -20,10 +20,16 @@ h1, h2, h3, h4, h5, h6 {
  a {
   color: rgb(50, 104, 145);
   text-decoration: none;
+      -moz-transition: color 0.20s ease-in-out, background-color 0.20s ease-in-out;
+    -webkit-transition: color 0.20s ease-in-out, background-color 0.20s ease-in-out;
+    -o-transition: color 0.20s ease-in-out, background-color 0.20s ease-in-out;
+    -ms-transition: color 0.20s ease-in-out, background-color 0.20s ease-in-out;
+    transition: color 0.20s ease-in-out, background-color 0.20s ease-in-out;
 }
 
  a:hover {
-  color: rgb(50, 104, 145);
+  /*color: rgb(75, 156, 225);*/
+  color: rgb(75, 156, 225);
   text-decoration: underline;
 }
 
