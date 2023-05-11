@@ -167,68 +167,6 @@ position: relative;
  */
 
 
-/*collpse and set the height of the toggle text*/
-
-.pa-toggle-text .et_pb_text_inner {
-  max-height: 200px;
-  transition: max-height 0.3s ease-out;
-  overflow: hidden;
-}
-
-
-/*add gradient to the collapsed text*/
-
-.pa-toggle-text .et_pb_text_inner:after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  pointer-events: none;
-  height: 100px;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: linear-gradient(0deg, #fff 10%, transparent);
-}
-
-
-/*style the expand text link*/
-
-.pa-toggle-text .pa-text-expand-button {
-  padding: 0.5em;
-  text-align: center;
-  color: #00d263!important;
-}
-
-
-/*change the curor to a pointed when hovering over the expand text link*/
-
-.pa-toggle-text .pa-text-expand-button span {
-  cursor: pointer;
-}
-
-
-/*define the font family for the toggle icon*/
-
-.pa-toggle-text .pa-text-expand-button .pa-text-toggle-icon {
-  font-family: ETMODULES, "sans-serif";
-}
-
-
-/*set the max height and transition of the expanded toggle*/
-
-.pa-toggle-text .pa-text-toggle-expanded {
-  max-height: 2000px;
-  transition: max-height 0.3s ease-in;
-}
-
-
-/*hide the gradient when the toggle is expanded*/
-
-.pa-toggle-text .pa-text-toggle-expanded.et_pb_text_inner:after {
-  background: none;
-}
-
   .collapsible {
     position: relative;
     padding-bottom: 0.5em;
