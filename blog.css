@@ -238,7 +238,7 @@ position: relative;
  * Form
  */
 
-  @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+ /* @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #aca49c;
@@ -278,7 +278,7 @@ input:focus::placeholder, textarea::focus:placeholder {
 
 /* on hover placeholder */
 
-input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+/*input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
   color: #e2dedb;
   font-size: 0.875em;
 }
@@ -415,7 +415,7 @@ textarea:hover {
 
  #submit:hover {
   color: #e2dedb;
-}
+}*/
 
 /*
 *Spinner

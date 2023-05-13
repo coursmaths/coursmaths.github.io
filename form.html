@@ -278,15 +278,27 @@
         Contact
       </h2>
 
-         <form id="form" class="topBefore" position=absolute method="POST" action="https://script.google.com/macros/s/AKfycbyA4mqhyFI3fpK3c7iPlQCdcEDc97gtqFkMm2i4Ve3T7HExqhENPNiLAyolo29SHbEA/exec">
 
-      <input name="name" type="name" id="name" type="text" placeholder="NAME" required>
-      <input name="email" type="email" id="email" type="text" placeholder="E-MAIL" required>
-      <textarea name="message" id="message" type="text" placeholder="MESSAGE"></textarea>
-  <input id="submit" type="submit" >
-  <div id="html-spinner" style = "visibility:hidden"></div>
 
+<form id="form" method="POST" action="https://script.google.com/macros/s/AKfycbyA4mqhyFI3fpK3c7iPlQCdcEDc97gtqFkMm2i4Ve3T7HExqhENPNiLAyolo29SHbEA/exec">
+    <div class="form-group" >
+    <label for="exampleInputName">Nom</label>
+    <input name="name" type="name" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter name" required>
+  </div>
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Email</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message</label>
+    <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+   <div id="html-spinner" style = "visibility:hidden"></div>
 </form>
+
+
 <div style = "visibility:hidden" id = "aftersubmit" text-align='center' position='relative' top=0>
     <p>Votre message a bien été envoyé, merci.</p>
     <a href="index.html"  aria-hidden="true"  ><span>Retour.</span></a></li>
