@@ -132,7 +132,7 @@ position: relative;
 
 
   .styled-table1 {
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     /*margin: 25px auto 25px auto;*/
     font-size: 0.9em;
     font-family: sans-serif;
