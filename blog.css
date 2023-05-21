@@ -73,6 +73,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+
+@media  (min-device-width: 1025px) {
 .tweet {
 position: relative;
   
@@ -80,6 +83,17 @@ position: relative;
   background-attachment: fixed;
   background-size: cover;
 
+}
+}
+
+@media   (max-device-width: 1024px) {
+.tweet {
+position: relative;
+  
+  background: url(header.jpg) no-repeat center center;
+  background-size: cover;
+
+}
 }
 
 .tweet blockquote
