@@ -224,10 +224,10 @@
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" >
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Concours Centrale Supelec</strong>
-          <h3 class="mb-0">mathématiques 1 PC</h3>
-          <div class="mb-1 text-body-secondary">10 Mai</div>
-          <p class="card-text mb-auto">Un cas particulier du théorème de Perron-Frobenius.</p>
-          <a href="#maths1pccs23" class="stretched-link">Continuer la lecture</a>
+          <h3 class="mb-0">mathématiques 2 MP</h3>
+          <div class="mb-1 text-body-secondary">22 Mai</div>
+          <p class="card-text mb-auto">Un sujet d'analyse et de probabilité qui se proposait de démontrer un cas particulier du théorème central limite.</p>
+          <a href="#maths2mpcs23" class="stretched-link">Continuer la lecture</a>
         </div>
         <div class="col-auto d-none d-lg-block">
           <!--<svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></svg>-->
@@ -389,6 +389,30 @@
         </ul>
         <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
       </article>-->
+      <hr>
+
+      <article class="blog-post" id="maths2mpcs23">
+        <h2 class="blog-post-title mb-1">Concours Centrale Supelec: mathématiques 2 MP</h2>
+        <p class="blog-post-meta"><time datetime="2023-05-22">22 Mai, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
+        <p>Un sujet assez intérressant, cohérent, mêlant analyse et probabilité.</p>
+        <p>Il y avait quelques passages assez difficiles:
+           <ul type=circle>
+          <li>Les questions 22 à 25, qui permettaient de démontrer la convergence uniforme d'une suite de fonctions  vers la densité de la loi normale \(\mathcal{N}(0,1)\), \(\varphi(t)= \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}\)</li>
+          <li>la question 31 permettait de démontrer un cas particulier du théorème central limite. \[\mathrm{P}(\frac{\sum_{i=1}^n X_i}{\sqrt{n}}\geqslant u )\underset{n\to+\infty}{\rightarrow}\int_u^{+\infty} \varphi(t)\mathrm{d} t\] 
+           Les \(X_i\) sont ici des VA indépendantes qui prennent pour valeur -1 ou 1 avec la probabilité \(\frac{1}{2}\). 
+          </li>
+          <li>La question 33 était une application qui permettait de démontrer un critère de tension.</li>  
+          </ul>
+
+          <p>On pouvait ainsi observer que la  loi normale est une limite de suite de lois binomiales, ou encore que la loi binomiale est une sorte de discrétisation de la loi normale.</p>
+
+          <p>En fait le théorème central limite est beaucoup plus puissant, puisque le résultat démontré dans la question 31 s'étend à toute suite de VA indépendantes, de même loi, possédant une variance \(\sigma^2_X\). On dit que la VA \[\frac{\sum_{i=1}^n X_i}{\sqrt{n}}\] converge en loi vers la loi normale  \(\mathcal{N}(0,\sigma^2_X)\).</p>
+        </p>
+        <p>Un corrigé de l'épreuve de maths 2 posée le 12 Mai en MP concours Centrale Supelec 2023: <a href="doc/maths2mpcs23.pdf" class="fa fa-file-pdf" aria-hidden="true"target="_blank" ><span></span></a></p>
+        <p>Retrouver le sujet: <a href="doc/maths2mpcs23_sj.pdf" class="fa fa-file-pdf" aria-hidden="true"target="_blank" ><span></span></a></p>
+
+      </article>
+
 
       <hr>
 
