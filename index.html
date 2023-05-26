@@ -396,11 +396,41 @@
         <h2 class="blog-post-title mb-1">Concours Centrale Supelec: mathématiques 1 MP</h2>
         <p class="blog-post-meta"><time datetime="2023-05-26">26 Mai, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
         <p>Un sujet d'algèbre, très long, sur les polynômes et le calcul ombral.</p>
+        <p>Au coeur de ce formalisme, on a la dérivation de Pincherle.</p>
+        <p>On introduit l'opérateur \(\mathbf{x}\) qui est un endomorphisme de polynômes:\[
+        \begin{alignat*}{1}
+          \mathbf{x}:\mathbb{K}[X]&\to\mathbb{K}[X]\\
+        p&\mapsto Xp
+        \end{alignat*}
+      \]</p>
+      <p>On introduit alors la dérivation de Pincherle, qui est un endomorphisme d'endomorphismes de polynômes:
+        \begin{alignat*}{1}
+          \mathrm{End}(\mathbb{K}[X])&\to\mathrm{End}(\mathbb{K}[X])\\
+        T&\mapsto T'=T\mathbf{x}-\mathbf{x}T
+        \end{alignat*}
+      </p>
+      <p>On retrouve des propriétés qui nous sont familières, comme:
+        
+           \[(\sum_{k=0}^{+\infty} a_k D^k)'=\sum_{k=1}^{+\infty} ka_k D^{k-1}\]
+           \[(ST)'=S'T+ST'\]
+        </p>
+        <p>On étudie particulièrement les endomorphismes shift invariants:
+            \[
+            \begin{alignat*}{1}
+          E_a:\mathbb{K}[X]&\to\mathbb{K}[X]\\
+        p&\mapsto p(X+a)
+        \end{alignat*}
+            \]
+            \[
+              T \text{ shift invariant }\Leftrightarrow \forall a,\quad TE_a=E_aT
+            \]
+
+        </p>
         <p>Un corrigé de l'épreuve de maths 1 posée le 9 Mai en MP concours Centrale Supelec 2023: <a href="doc/maths1mpcs23.pdf" class="fa fa-file-pdf" aria-hidden="true"target="_blank" ><span></span></a></p>
         <p>Retrouver le sujet: <a href="doc/maths1mpcs23_sj.pdf" class="fa fa-file-pdf" aria-hidden="true"target="_blank" ><span></span></a></p>
 
       </article>
-      
+
       <hr>
 
       <article class="blog-post" id="maths2mpcs23">
