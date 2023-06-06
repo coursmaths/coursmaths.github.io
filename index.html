@@ -412,23 +412,37 @@
         <p>Comme on le démontre dans le problème, la rotation d'un angle \(\theta\) autour du vecteur \(n=\begin{bmatrix}n_x&n_y&n_z\end{bmatrix}\) est représentée par le quaternion:
          \[
          \begin{array}{rl} 
-         \begin{bmatrix} \cos \frac{\theta}{2}\\
+         Q=\begin{bmatrix} \cos \frac{\theta}{2}\\
          n_x\sin \frac{\theta}{2}\\
          n_y\sin \frac{\theta}{2}\\
          n_z\sin \frac{\theta}{2}\\
          \end{bmatrix}  
          %
          &\begin{array}{l}
-                       \left.\vphantom{\begin{bmatrix} \cos \frac{\theta}{2}\end{bmatrix}}\right\}\text{ partie réelle} \\
+                       \left.\vphantom{\begin{bmatrix} \cos \frac{\theta}{2}\end{bmatrix}}\right\}\text{ partie réelle }q_0 \\
                        \left.
                      \vphantom{\begin{bmatrix} 
                      n_x\sin \frac{\theta}{2}\\
                      n_y\sin \frac{\theta}{2}\\
                      n_z\sin \frac{\theta}{2}\\
-                     \end{bmatrix} }\right\}\text{partie imaginaire} \\
+                     \end{bmatrix} }\right\}\text{partie imaginaire }q \\
                      \end{array}  \\
          \end{array}
                \]
+        </p>
+        <p>Le produit dans \(\mathbb{H}\) a une interprétation géométrique dans \(\mathbb{R}^3\):
+          \[
+          \begin{array}{rl} 
+          XY &=\begin{bmatrix} x_0y_0 -x^Ty\\
+          \vphantom{\begin{bmatrix} 
+                     n_x\sin \frac{\theta}{2}\\
+                     n_y\sin \frac{\theta}{2}\\
+                     n_z\sin \frac{\theta}{2}\\
+                     \end{bmatrix} } x_0y+y_0x + x\times y
+          \end{bmatrix}  
+          \end{array}
+                \]
+
         </p>
         <p>Au cours du sujet on démontre aussi: 
           
