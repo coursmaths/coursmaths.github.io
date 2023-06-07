@@ -176,7 +176,7 @@ position: relative;
   }
 
   .topics {
-    background-image: linear-gradient(to left, rgba(255,255,255,0.4) , rgba(255,255,255,1)),url('DSC_0110.png');
+    background-image: linear-gradient(to left, rgba(255,255,255,0.3) , rgba(255,255,255,1)),url('DSC_0110.png');
     background-size: cover;
   }
 
