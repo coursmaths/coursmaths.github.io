@@ -348,6 +348,64 @@
       <hr>
 
       <article class="blog-post" id="discontinuité">
+        <h2 class="blog-post-title mb-1">Transformation d'Abel.</h2>
+        <p class="blog-post-meta"><time datetime="2023-07-16">16 Juillet, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
+        <p> La transformation d'Abel est une technique à connaitre pour l'étude des séries numériques:
+          \[
+          \begin{alignat*}{1}
+          \sum_{k=0}^n u_k &= \sum_{k=0}^n 1\times u_k \\
+          &= \sum_{k=0}^n (k+1-k)u_k \\
+          &= \sum_{k=0}^n (k+1)u_k -\sum_{k=1}^n ku_k \\
+          &= \sum_{k=1}^{n+1} ku_{k-1} -\sum_{k=1}^n ku_k \\
+          &= \sum_{k=1}^{n} k(u_{k-1}-u_k) +(n+1)u_n \\
+          \end{alignat*}
+          \]
+        </p>
+
+        <p>On appelle aussi cette transformation l'intégration par parties discrètes; en effet si 
+          \[
+          \begin{alignat*}{1}
+          f:[0,1] &\to \mathbb{R} \\
+          \end{alignat*}
+          \]
+          de classe \(C^1\), et si on pose 
+          \[
+          \begin{alignat*}{1}
+          \forall k\in \lBrack 0, n\rBrack,\quad u_k & = f(\frac{k}{n})
+          \end{alignat*}
+          \]
+          puis qu'un approxime une intégrale par une somme de Riemann
+          \[
+          \begin{alignat*}{1}
+          \int_0^1 g(t)\mathrm{d}t &\approx \sum_{k=1}^n\frac{1}{n}g(\frac{k}{n})
+          \end{alignat*}
+          \]
+          et la dérivée par 
+          \[
+          \begin{alignat*}{1}
+          f'(\frac{k}{n}) &\approx \frac{f(\frac{k}{n})-f(\frac{k-1}{n})}{\frac{1}{n}}
+          \end{alignat*}
+          \]
+          Alors l'intégration par parties
+          \[
+          \begin{alignat*}{1}
+          \int_0^1 f(t)\mathrm{d}t & = [tf(t)]_0^1 - \int_0^1 tf'(t)\mathrm{d}t
+          \end{alignat*}
+          \]
+          va se discrétiser ainsi:
+          \[
+          \begin{alignat*}{1}
+          \frac{1}{n}\sum_{k=1}^n f(\frac{k}{n}) &\approx \frac{n+1}{n}f(1)-\frac{1}{n}f(0) - \sum_{k=1}^n \frac{k}{n}\frac{f(\frac{k}{n})-f(\frac{k-1}{n})}{\frac{1}{n}}\frac{1}{n} \\
+          \Leftrightarrow \frac{1}{n}\sum_{k=0}^n u_k &\approx \frac{n+1}{n}u_n - \sum_{k=1}^n \frac{k}{n}(u_k-u_{k-1})
+          \end{alignat*}
+          \]
+          (dans le crochet d'intégration on approche 0 et 1 par \(\frac{1}{n}\) et \(\frac{n+1}{n}\) pour tomber exactement sur la transformation d'Abel.)
+          </p>
+      </article>
+
+      <hr>
+
+      <article class="blog-post" id="discontinuité">
         <h2 class="blog-post-title mb-1">Compacts: propriété de Borel-Lebesgue.</h2>
         <p class="blog-post-meta"><time datetime="2023-07-15">15 Juillet, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
         <p> La définition des parties compactes d'un espace métrique est la suivante:
