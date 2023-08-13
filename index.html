@@ -273,6 +273,157 @@
       </h3>-->
       <hr>
 
+      <article class="blog-post" id="comparaison">
+        <h2 class="blog-post-title mb-1">Théorèmes de comparaison.</h2>
+        <p class="blog-post-meta"><time datetime="2023-08-13">13 Août, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
+        <p> Les théorèmes de comparaison font partie des théorèmes fondamentaux pour l'étude des suites / séries numériques: </p>
+        <div class="card" >
+          <div class="card-body">
+        <p> <strong>Théorème: </strong>Soit \(\sum_{n\in\mathbb{N}} u_n\) et \(\sum_{n\in\mathbb{N}} v_n\) deux séries à termes réels positifs (le théorème s'applique plus généralement aux séries à termes de signes constant à partir d'un certain rang).</p>
+        <p><ol type="i">  
+          <li>
+        On suppose:
+          \[\exists n_0\in\mathbb{N}\quad \forall n\geqslant n_0,\quad u_n\leqslant v_n\]
+          Alors on a:
+          \[\sum_{n\in\mathbb{N}} v_n \text{ converge } \Rightarrow \sum_{n\in\mathbb{N}} u_n \text{ converge}\]</p></li>
+          <li>
+            On suppose:
+              \[u_n\underset{}{=}o(v_n)\]
+              Alors on a:
+              \[\sum_{n\in\mathbb{N}} v_n \text{ converge } \Rightarrow \sum_{n\in\mathbb{N}} u_n \text{ converge}\]</p></li>
+              <li>
+                On suppose:
+                  \[u_n \sim v_n\]
+                  Alors on a:
+                  \[\sum_{n\in\mathbb{N}} v_n \text{ converge } \Leftrightarrow \sum_{n\in\mathbb{N}} u_n \text{ converge}\]</p>
+                De plus dans le cas de la convergence on a équivalence des restes:
+                \[\sum_{k=n}^{+\infty}u_k \sim \sum_{k=n}^{+\infty}v_k\]
+                Dans le cas de divergence, on a équivalence des sommes partielles:
+                \[\sum_{k=0}^{n}u_k \sim \sum_{k=0}^{n}v_k\]
+              </li>
+            </ol>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#dem3" aria-expanded="false" aria-controls="dem3">
+        Dem
+    </button>
+    </p>
+    <div class="collapse" id="dem3">
+      <div class="card card-body">
+        <p>Il est conseillé de bien garder en tête toutes les formulations pour l'équivalence de deux suites:
+        \(u_n\sim v_n\) ssi \(u_n-v_n=o(v_n)\)ssi quelque soit \(\epsilon>0\) (aussi petit soit-il), il existe un entier \(n_0\) tel que \(\forall n\geqslant n_0\)
+        \[
+        \begin{alignat*}{1}
+        &\abs{u_n-v_n} \leqslant \epsilon \abs{v_n} \\
+        &\Leftrightarrow\quad (1-\epsilon) v_n \leqslant u_n \leqslant (1+\epsilon) v_n \qquad(\text{ si }v_n>0)\\
+        &\Leftrightarrow\quad 1-\epsilon \leqslant \frac{u_n}{v_n} \leqslant 1+\epsilon  \\
+        &\Leftrightarrow\quad  \abs{\frac{u_n}{v_n}-1} \leqslant \epsilon  \\
+        \end{alignat*}
+        \] les deux dernières formulation étant valable quand \(v_n\) ne s'annule pas pour \(n\) grand.</p>
+
+        On note 
+        \[
+        \begin{alignat*}{1}
+        S_n &=  \sum_{k=0}^n u_k \\
+        T_n &=  \sum_{k=0}^n v_k \\
+        \end{alignat*}
+        \]
+        <ol type="i">
+          <li> <p>On suppose que la série \(\sum_{n\in\mathbb{N}}v_n\) converge. Soit \(n\geqslant n_0\).
+            \[
+            \begin{alignat*}{1}
+            \sum_{k=0}^n u_k &= \sum_{k=0}^{n_0-1} u_k + \sum_{k=n_0}^n u_k \\
+            &\leqslant \sum_{k=0}^{n_0-1} u_k + \sum_{k=n_0}^n v_k \\
+            &\leqslant \sum_{k=0}^{n_0-1} u_k + \sum_{k=0}^n v_k \\
+            &\leqslant \sum_{k=0}^{n_0-1} u_k + \sum_{k=0}^{+\infty} v_k \\
+            \end{alignat*}
+            \]
+            La majoration reste valable pour \(n < n_0\).
+            </p>
+            <p>Cela montre que la suite des sommes partielles \((S_n)\) est majorée. Comme \(u_n\geqslant0\), la suite \((S_n)\) est aussi croissante donc elle converge, i.e. la série \(\sum_{n\in\mathbb{N}}u_n\) converge.</p>
+          </li>
+          <li>
+           Soit \(\epsilon=1\). Comme \(u_n\underset{}{=}o(v_n)\), 
+           \[\exists n_0\in\mathbb{N}\quad \forall n\geqslant n_0,\quad u_n=\abs{u_n}\leqslant \epsilon\abs{v_n}=v_n\]
+           ce qui ramène au cas précédent.
+          </li> 
+          <li><p>On suppose que la série \(\sum_{n\in\mathbb{N}}v_n\) converge.</p>
+           <p>Soit \(\epsilon>0\). 
+           \[\exists n_0\in\mathbb{n}\quad\forall n\geqslant n_0,\quad \abs{u_n-v_n}\leqslant \epsilon v_n\] 
+           Donc, \(\forall n\geqslant n_0\),
+           \[
+           \begin{alignat*}{1} 
+           \sum_{k=0}^n u_k &= \sum_{k=0}^{n_0-1} u_k + \sum_{k=n_0}^n u_k \\
+           &\leqslant  \sum_{k=0}^{n_0-1} u_k + (1+\epsilon) \sum_{k=n_0}^n v_k\\
+           &\leqslant  \sum_{k=0}^{n_0-1} u_k + (1+\epsilon) \sum_{k=0}^{+\infty} v_k \\
+           \end{alignat*}
+           \]
+           La majoration reste valable pour \(n < n_0\).
+            </p>
+            <p>Cela montre que la suite des sommes partielles \((S_n)\) est majorée. Comme \(u_n\geqslant0\), la suite \((S_n)\) est aussi croissante donc elle converge, i.e. la série \(\sum_{n\in\mathbb{N}}u_n\) converge.</p>
+            <p>Par symétrie on a aussi
+              \[\sum_{n\in\mathbb{N}}u_n\text{ converge }\Rightarrow \sum_{n\in\mathbb{N}}v_n \text{ converge }\]
+            </p>
+            <p>
+              Supposons que les séries divergent. Dans ce cas les suites des sommes partielles ne sont pas mojorées et
+              \[\lim_{n\to +\infty} S_n =\lim_{n\to +\infty} T_n = + \infty\]
+            </p>
+            <p>Pour \(n\geqslant n_0\), 
+              \[
+              \begin{alignat*}{1}
+              \sum_{k=0}^{n_0-1} u_k + (1-\epsilon)  \sum_{k=n_0}^n v_k &\leqslant \sum_{k=0}^n u_k \leqslant  \sum_{k=0}^{n_0-1} u_k + (1+\epsilon) \sum_{k=n_0}^n v_k\\
+              \Leftrightarrow\quad \underbrace{\sum_{k=0}^{n_0-1} u_k -(1-\epsilon) \sum_{k=0}^{n_0-1} v_k}_{=A} + (1-\epsilon)  \sum_{k=0}^n v_k&\leqslant \sum_{k=0}^n u_k \leqslant  \underbrace{\sum_{k=0}^{n_0-1} u_k - (1+\epsilon) \sum_{k=0}^{n_0-1} v_k}_{=B} +  (1+\epsilon) \sum_{k=0}^n v_k\\
+              \end{alignat*}
+              \]
+              </p>
+              <p>
+            Les expressions \(A\) et \(B\) sont constantes (ne dépendent pas de \(n\)), donc elles sont négligeables devant \(T_n\). On peut donc trouver un entier \(n_1\geqslant n_0\) tel que \(\forall n\geqslant n_1\),
+            \[
+            \begin{alignat*}{1}
+               -\epsilon  \sum_{k=0}^n v_k + (1-\epsilon)  \sum_{k=0}^n v_k &\leqslant \sum_{k=0}^n u_k \leqslant  \epsilon  \sum_{k=0}^n v_k +  (1+\epsilon) \sum_{k=0}^n v_k\\
+               \Leftrightarrow\quad (1-2\epsilon)  \sum_{k=0}^n v_k &\leqslant \sum_{k=0}^n u_k \leqslant    (1+2\epsilon) \sum_{k=0}^n v_k\\
+              \end{alignat*}
+            \]
+            Ce qui montre \(S_n\sim T_n\).
+            </p>
+            <p>
+              Si maintenant les séries convergent le raisonnement précédent n'est plus valable par contre on peut écrire pour \(n\geqslant n_0\), en sommant les relations entre \(u_n\) et \(v_n\) jusqu'à l'infini,
+              \[\begin{alignat*}{1}
+               (1-\epsilon)  \sum_{k=n}^{+\infty} v_k &\leqslant \sum_{k=n}^{+\infty} u_k \leqslant    (1+\epsilon) \sum_{k=n}^{+\infty} v_k\\
+              \end{alignat*}
+            \]
+            ce qui montre que les restes des séries sont équivalents.
+            </p>
+          </li>
+          </ol>
+        </div>
+        </div>
+        <p>Une série numérique est une suite, la suite des sommes partielles \((S_n)_{n\in\mathbb{N}}\). </p>
+        <p>Inversemment, on a tendance à moins y penser mais une suite quelconque peut toujours s'écrire comme une série:
+          \[
+          u_n = \sum_{k=1}^n (u_k-u_{k-1}) + u_0
+           \]
+           Cette série a même nature que la suite \((u_n)\). Si \(u_n\to l\), on peut aussi écrire la suite comme un reste de série convergente:
+           \[
+           -u_n = \sum_{k=n}^{+\infty} (u_{k+1} - u_k) -l
+           \]
+</p>  
+<p>
+  On peut ainsi souvent appliquer le théorème d'équivalence des sommes partielles / restes à une suite quand on en cherche un équivalent:
+  <ol >
+    <li>
+      Si \(u_n\to l\), on essaiera d'appliquer l'équivalence des restes.
+    </li>
+    <li>
+      Si \(u_n \to \infty \), on essaiera d'appliquer l'équivalence des sommes partielles
+    </li>
+  </ol>
+</p>
+      </article>
+
+
+      <hr>
+
       <article class="blog-post" id="discontinuité">
         <h2 class="blog-post-title mb-1">Transformation d'Abel.</h2>
         <p class="blog-post-meta"><time datetime="2023-07-16">16 Juillet, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
