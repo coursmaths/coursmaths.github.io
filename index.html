@@ -310,7 +310,10 @@
     </p>
     <div class="collapse" id="dem3">
       <div class="card card-body">
-        <p>Il est conseillé de bien garder en tête toutes les formulations pour l'équivalence de deux suites:
+        <div class="card text-dark bg-light mb-3" >
+          <div class="card-body">
+            <h5 class="card-title">Définition - rappels</h5>
+        <p class="card-text">Il est conseillé de bien garder en tête toutes les formulations pour l'équivalence de deux suites:
         \(u_n\sim v_n\) ssi \(u_n-v_n=o(v_n)\)ssi quelque soit \(\epsilon>0\) (aussi petit soit-il), il existe un entier \(n_0\) tel que \(\forall n\geqslant n_0\)
         \[
         \begin{alignat*}{1}
@@ -320,8 +323,14 @@
         &\Leftrightarrow\quad  \abs{\frac{u_n}{v_n}-1} \leqslant \epsilon  \\
         \end{alignat*}
         \] les deux dernières formulation étant valable quand \(v_n\) ne s'annule pas pour \(n\) grand, et équivalent à \(\frac{u_n}{v_n}\to 1\).</p>
-        <p>Bien sûr, on peut écrire les mêmes inégalités en inversant les rôles de \(u_n\) et \(v_n\).</p>
-
+        <p class="card-text">Bien sûr, on peut écrire les mêmes inégalités en inversant les rôles de \(u_n\) et \(v_n\).</p>
+          </div></div>
+          <div class="card text-dark bg-light mb-3" >
+            <div class="card-body">
+              <h5 class="card-title">Remarque</h5>
+          <p class="card-text">Les propriétés en question étant des propriétés asymptotiques, l'adaptation de la dém au cas \(u_n\geqslant 0\) à partir d'un certain rang \(N\) est directe, il suffit de choisir les indices \(n_0,n_1\) supérieurs à \(N\).</p>
+        <p class="card-text">Le cas \(u_n\leqslant 0\) se traite en considérant \(\sum_{n\in\mathbb{N}}-u_n\).</p>
+        </div></div>
         On note 
         \[
         \begin{alignat*}{1}
