@@ -279,11 +279,12 @@
         <p> L'exercice suivant permet d'appliquer et mieux comprendre l'intérêt de la transformation d'Abel. Par ailleurs c'est un exemple de série de fonctions qui converge uniformément sur une partie de \(\mathbb{C}\), mais pas nécessairement normalement.
           <div class="card" >
             <div class="card-body">
-          <p> <strong>Exercice: </strong>Soit \((a_n)_{n\in\mathbb{N}}\in \mathbb{C}^{\mathbb{N}}\) et \((\lambda_n)_{n\in\mathbb{N}}\) une suite croissante de réels positifs. On suppose que la série \(\sum a_ne^{-\lambda_n z_0}\) converge.</p>
+          <p> <strong>Exercice: </strong>Soit \((a_n)_{n\in\mathbb{N}}\in \mathbb{C}^{\mathbb{N}}\) et \((\lambda_n)_{n\in\mathbb{N}}\) une suite strictement croissante de réels positifs. On suppose que la série \(\sum a_ne^{-\lambda_n z_0}\) converge.</p>
           <p>Montrer que la série de fonctions \(\sum a_ne^{-\lambda_n z}\) converge uniformément sur l'ensemble \(\mathcal{D}=\{z\in \mathbb{C},\quad \abs{\mathrm{arg}(z-z_0)}\leqslant \theta_0\}\cup\{z_0\}\), où \(\theta_0\in ]-\frac{\pi}{2},\frac{\pi}{2}[\).</p>
           </div>
         </div>
         </p>
+        <p>Les séries de Dirichlet correspondent au cas \((\lambda_n)\) non bornée.</p>
       <!--
       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#indicationsdirichlet" aria-expanded="false" aria-controls="indicationsdirichlet">
         Indications
@@ -344,6 +345,31 @@
     </p>
     <div class="collapse" id="soldirichlet" >
       <div class="card card-body">
+        <div class="card text-dark bg-light mb-3" >
+          <div class="card-body">
+            <h5 class="card-title">Critère de Cauchy uniforme</h5>
+        <p class="card-text"> Une suite de fonctions d'un ensemble \(X\) dans  un ev normé \(E\) converge uniformément si et seulement si
+          \[
+          \forall \epsilon>0,\exists n_0\in \mathbb{N},\forall p\geqslant n_0,\forall q\geqslant n_0,\forall x\in X,\quad \norm{f_p(x)-f_q(x)}\leqslant \epsilon
+          \]
+        </p>
+          </div></div>
+          <div class="card text-dark bg-light mb-3" >
+            <div class="card-body">
+              <h5 class="card-title">Critère de Cauchy uniforme - Cas des séries</h5>
+          <p class="card-text"> Le critère se reformule directement ainsi dans le cas particulier des séries de fonctions:</p>
+          <p class="card-text"> 
+            \[
+          \forall \epsilon>0,\exists n_0\in \mathbb{N},\forall N\geqslant n_0,\forall p\in\mathbb{N},\forall x\in X,\quad \norm{\sum_{n=N}^{N+p} f_n(x)}\leqslant \epsilon
+          \]
+          </p>
+            </div></div>
+            <div class="card text-dark bg-light mb-3" >
+              <div class="card-body">
+                <h5 class="card-title">Remarque</h5>
+            <p class="card-text"> Le critère est utile lorsque qu'on veut montrer la convergence uniforme dans les cas où la convergence simple n'est pas supposée connue, et donc on n'a pas de fonction limite candidate.</p> 
+            <p class="card-text">Dans le cas des séries, il sert à montrer la convergence uniforme quand il n'y a pas convergence normale.</p>
+              </div></div>
         <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='235pt' height='203pt' viewBox='-72.000004 -72.000009 235 203'>
           <defs>
           <clipPath id='clip1'>
