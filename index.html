@@ -431,7 +431,7 @@
           et à faire une transformation d'Abel.
         </p>
         <p>Posons \(z-z_0=a+i\mkern1mu b\), ce qui permet de traduire facilement par une simple majoration l'appartenance à \(\mathcal{D}\setminus\{z_0\}\)
-          \[z\in \mathcal{D}\setminus\{z_0\} \Leftrightarrow a>0 \land \abs{\frac{b}{a}}\leqslant \tan{\theta_0}\]
+          \[z\in \mathcal{D}\setminus\{z_0\} \Leftrightarrow a>0 \land \abs{\frac{b}{a}}\leqslant \abs{\tan{\theta_0}}\]
         </p>
         <p>On fait la transformation d'Abel en "intégrant" \(a_n e^{-\lambda_n z_0}\) et en "dérivant" \(e^{-\lambda_n (z-z_0) }\); \(\forall z\in \mathcal{D}\),
         \[
@@ -443,7 +443,7 @@
         \end{alignat*}
         \]  
         </p>
-        <p>Cela a un sens maintenant de prendre le module et de majorer terme à terme:
+        <p>Cela a un sens maintenant de prendre le module et de majorer terme à terme; il faut majorer par une expression indépendante de \(p,a,b\), qui tend vers 0 quand \(N\to +\infty\):
           \[
           \begin{alignat*}{1}
           \abs{ \sum_{n=N}^{N+p} a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) }} &\leqslant \abs{R_N} e^{-\lambda_N a} + \sum_{n=N+1}^{N+p} \abs{R_n}\abs{ e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) } }  +\abs{ R_{N+p+1}} e^{-\lambda_{N+p} a }  \\
