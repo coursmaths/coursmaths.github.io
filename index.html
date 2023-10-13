@@ -273,6 +273,218 @@
       </h3>-->
       <hr>
 
+      <article class="blog-post" id="dirichletseries">
+        <h2 class="blog-post-title mb-1">Séries de Dirichlet.</h2>
+        <p class="blog-post-meta"><time datetime="2023-10-13">13 Octobre, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
+        <p> L'exercice suivant permet d'appliquer et mieux comprendre l'intérêt de la transformation d'Abel. Par ailleurs c'est un exemple de série de fonctions qui converge uniformément, mais pas nécessairement normalement.
+          <div class="card" >
+            <div class="card-body">
+          <p> <strong>Exercice: </strong>Soit \((a_n)_{n\in\mathbb{N}}\in \mathbb{C}^{\mathbb{N}}\) et \((\lambda_n)_{n\in\mathbb{N}}\) une suite croissante de réels positifs. On suppose que la série \(\sum a_ne^{-\lambda_n z_0}\) converge.</p>
+          <p>Montrer que la série de fonctions \(\sum a_ne^{-\lambda_n z}\) converge uniformément sur l'ensemble \(\mathcal{D}=\{z\in \mathbb{C},\quad \abs{\mathrm{arg}(z-z_0)}\leqslant \theta_0\}\), où \(\theta_0\in ]-\frac{\pi}{2},\frac{\pi}{2}[\).</p>
+          </div>
+        </div>
+        </p>
+      <!--
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#indicationsdirichlet" aria-expanded="false" aria-controls="indicationsdirichlet">
+        Indications
+    </button>
+    </p>
+    <div class="collapse" id="indicationsdirichlet">
+      <div class="card card-body">
+          <div class="accordion" id="accordion5.0">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading5.0">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5.0" aria-expanded="true" aria-controls="collapse5.0">
+                  Indice #1
+                </button>
+              </h2>
+              <div id="collapse5.0" class="accordion-collapse collapse show" aria-labelledby="headings5.0" data-bs-parent="#accordion5.0">
+                <div class="accordion-body">
+                  <p> Montrer que le nombre de discontinuités de \(f\) sur un segment quelconque \(I\subset\mathbb{R}\) est au plus dénombrable.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading5.1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5.1" aria-expanded="false" aria-controls="collapse5.1">
+                  Indice #2
+                </button>
+              </h2>
+              <div id="collapse5.1" class="accordion-collapse collapse" aria-labelledby="heading5.1" data-bs-parent="#accordion5.0">
+                <div class="accordion-body">
+                  <p>On peut quantifier la discontinuité en \(x\) par \[d(x)=\lvert l_x^+-f(x) \rvert + \lvert l_x^--f(x) \rvert\] où \(l_x^+=\lim_{\underset{t>x}{t\to x}} f(t)\) et \(l_x^-=\lim_{\underset{t < x}{t\to x}} f(t)\).
+                  </p>
+                  <p>Quel est la valeur maximum de la discontinuité \(d(t)\) pour \(t\in ]x-\alpha_x,x+\alpha_x[\setminus \{x\}\)?</p>
+                  <?xml version='1.0' encoding='UTF-8'?>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading5.2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5.2" aria-expanded="false" aria-controls="collapse5.2">
+                  Indice #3
+                </button>
+              </h2>
+              <div id="collapse5.2" class="accordion-collapse collapse" aria-labelledby="heading5.2" data-bs-parent="#accordion5.0">
+                <div class="accordion-body">
+                  <p> \[I\subset \bigcup_{x\in I}]x-\alpha_x,x+\alpha_x[\]
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>    
+      </div>-->
+
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#soldirichlet" aria-expanded="false" aria-controls="soldirichlet">
+        Solution
+      </button>
+    </p>
+    <div class="collapse show" id="soldirichlet" >
+      <div class="card card-body">
+        <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='235pt' height='203pt' viewBox='-72.000004 -72.000009 235 203'>
+          <defs>
+          <clipPath id='clip1'>
+          <path d='M.238281 .039062H234.241998V201.867008H.238281Z'/>
+          </clipPath>
+          <clipPath id='clip2'>
+          <path d='M.238281 .039062H234.241998V201.867008H.238281Z'/>
+          </clipPath>
+          </defs>
+          <g id='page1'>
+          <g transform='matrix(1 0 0 -1 -72.000004 130.999991)'>
+          <path d='M.238281 45.238309H232.249998' stroke='#808080' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+          <path d='M234.24226 45.238326L231.05476 46.83208L232.250076 45.238326L231.05476 43.64458' fill='#808080'/>
+          <path d='M11.382798 .039062V199.871008' stroke='#808080' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+          <path d='M11.382856 201.86746L9.78911 198.67605L11.382856 199.871367L12.97661 198.67605' fill='#808080'/>
+          <path d='M84.925798 107.637008L252.069998 163.352009V51.921909L84.925798 107.637008Z' fill='#f2f2f2' clip-path='url(#clip1)'/>
+          <g fill='none'>
+          <g stroke-width='.3985' stroke-miterlimit='10' clip-path='url(#clip2)'>
+          <path d='M84.925798 107.637008L252.069998 163.352009' stroke='#808080'/>
+          <path d='M84.925798 107.637008L252.069998 51.921909' stroke='#808080'/>
+          <path d='M84.925798 107.637008H252.069998' stroke='#bfbfbf' stroke-dasharray='.3985,1.99255'/>
+          <path d='M141.620998 107.637008C141.620998 113.730008 140.632998 119.785009 138.851998 125.129008' stroke='#000'/>
+          </g>
+          <path d='M137.718471 123.49254C138.253631 123.777703 138.757539 125.098015 138.757533 125.41442C138.948943 125.164419 140.144259 124.406611 140.741903 124.500361' stroke='#000' stroke-width='.318774' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round' clip-path='url(#clip2)'/>
+          </g>
+          <g clip-path='url(#clip2)'>
+          <path d='M118.53788 115.5698C118.53788 116.2898 118.34168 117.8054 117.22916 117.8054C115.71344 117.8054 114.03416 114.7298 114.03416 112.2326C114.03416 111.2078 114.35036 109.997 115.34252 109.997C116.88032 109.997 118.53788 113.1266 118.53788 115.5698ZM115.19012 114.0758C115.3754 114.773 115.59344 115.6454 116.02976 116.4206C116.32412 116.9546 116.72756 117.5654 117.21824 117.5654C117.7526 117.5654 117.81824 116.867 117.81824 116.2454C117.81824 115.7114 117.73064 115.1546 117.46916 114.0758H115.19012ZM117.371 113.7266C117.251 113.225 117.02192 112.2974 116.60756 111.5126C116.22596 110.771 115.8116 110.237 115.34252 110.237C114.98288 110.237 114.7538 110.5538 114.7538 111.5678C114.7538 112.025 114.81908 112.6574 115.10252 113.7266H117.371Z'/>
+          <path d='M122.63168 110.9786C122.63168 111.8306 122.54408 112.349 122.28128 112.859C121.93064 113.5598 121.2854 113.735 120.84728 113.735C119.84348 113.735 119.47688 112.9862 119.3654 112.763C119.07848 112.181 119.06252 111.3926 119.06252 110.9786C119.06252 110.453 119.08664 109.6478 119.46884 109.0106C119.83532 108.4214 120.42512 108.2702 120.84728 108.2702C121.22972 108.2702 121.9148 108.389 122.3132 109.1774C122.60792 109.751 122.63168 110.4602 122.63168 110.9786ZM120.84728 108.4922C120.57632 108.4922 120.0266 108.6206 119.85944 109.457C119.7716 109.9106 119.7716 110.6594 119.7716 111.0734C119.7716 111.6242 119.7716 112.181 119.85944 112.619C120.0266 113.4326 120.6482 113.5118 120.84728 113.5118C121.11824 113.5118 121.66784 113.3762 121.8272 112.6514C121.92284 112.2134 121.92284 111.6158 121.92284 111.0734C121.92284 110.6042 121.92284 109.8866 121.8272 109.4402C121.6598 108.6038 121.11008 108.4922 120.84728 108.4922Z'/>
+          <path d='M73.33362 107.0678C73.87146 107.645 74.16054 107.8946 74.51898 108.203C74.51898 108.2126 75.1365 108.7406 75.49494 109.0994C76.4409 110.0258 76.6599 110.5034 76.6599 110.543C76.6599 110.6426 76.5705 110.6426 76.55058 110.6426C76.48086 110.6426 76.45086 110.6234 76.40118 110.5334C76.10238 110.0558 75.89334 109.8962 75.6543 109.8962S75.29586 110.045 75.14622 110.2142C74.9571 110.4434 74.78778 110.6426 74.45934 110.6426C73.7121 110.6426 73.2543 109.7162 73.2543 109.5074C73.2543 109.457 73.28394 109.3982 73.3737 109.3982C73.46334 109.3982 73.48302 109.4474 73.50306 109.5074C73.69242 109.9658 74.26998 109.9754 74.34966 109.9754C74.5587 109.9754 74.74806 109.9058 74.97714 109.8266C75.37518 109.6766 75.48498 109.6766 75.74394 109.6766C75.38526 109.2482 74.54862 108.5318 74.35962 108.3722L73.46334 107.5358C72.78618 106.8686 72.43746 106.301 72.43746 106.2314C72.43746 106.1318 72.53706 106.1318 72.5571 106.1318C72.63678 106.1318 72.65646 106.151 72.71646 106.2614C72.94554 106.6094 73.24434 106.8782 73.5627 106.8782C73.79178 106.8782 73.8915 106.7894 74.1405 106.5002C74.30994 106.2902 74.48898 106.1318 74.7777 106.1318C75.76362 106.1318 76.34154 107.3966 76.34154 107.6654C76.34154 107.7146 76.30146 107.765 76.22178 107.765C76.13214 107.765 76.11246 107.705 76.08246 107.6354C75.85338 106.9874 75.21618 106.799 74.88738 106.799C74.68842 106.799 74.50902 106.859 74.29998 106.9286C73.96122 107.057 73.81182 107.0978 73.60278 107.0978C73.58274 107.0978 73.42338 107.0978 73.33362 107.0678Z'/>
+          <path d='M80.28654 107.0246C80.28654 107.7914 80.19582 108.3422 79.87518 108.8306C79.65894 109.151 79.22682 109.4306 78.66894 109.4306C77.05182 109.4306 77.05182 107.5262 77.05182 107.0246S77.05182 104.6618 78.66894 104.6618C80.28654 104.6618 80.28654 106.523 80.28654 107.0246ZM78.66894 104.8562C78.34842 104.8562 77.92338 105.0446 77.7837 105.617C77.68614 106.0274 77.68614 106.5998 77.68614 107.1158C77.68614 107.6246 77.68614 108.1538 77.7909 108.5378C77.93706 109.0886 78.38334 109.235 78.66894 109.235C79.0455 109.235 79.40802 109.0046 79.53366 108.6002C79.64526 108.2234 79.6521 107.7218 79.6521 107.1158C79.6521 106.5998 79.6521 106.0838 79.5615 105.6446C79.42206 105.0098 78.94806 104.8562 78.66894 104.8562Z'/>
+          <path d='M6.5637 68.5985L5.16942 68.4893V68.1809C5.81682 68.1809 5.90622 68.1209 5.90622 67.6325V64.9541C5.90622 64.5053 5.7969 64.5053 5.1297 64.5053V64.1969C5.44806 64.2065 5.9859 64.2269 6.22494 64.2269C6.57378 64.2269 6.92214 64.2065 7.26066 64.1969V64.5053C6.60342 64.5053 6.5637 64.5557 6.5637 64.9433V68.5985ZM6.60342 70.3313C6.60342 70.6505 6.35442 70.8593 6.07566 70.8593C5.7669 70.8593 5.54778 70.5905 5.54778 70.3313C5.54778 70.0625 5.7669 69.8033 6.07566 69.8033C6.35442 69.8033 6.60342 70.0133 6.60342 70.3313Z'/>
+          <path d='M34.10596 41.3759C34.10596 41.6147 34.10596 41.6351 33.87688 41.6351C33.25948 40.9979 32.38324 40.9979 32.0644 40.9979V40.6895C32.26384 40.6895 32.85136 40.6895 33.36916 40.9475V35.7899C33.36916 35.4311 33.33916 35.3111 32.44288 35.3111H32.12416V35.0027C32.47288 35.0327 33.33916 35.0327 33.73756 35.0327S35.00224 35.0327 35.35096 35.0027V35.3111H35.03224C34.13596 35.3111 34.10596 35.4203 34.10596 35.7899V41.3759Z'/>
+          <path d='M209.82168 74.0832C212.36268 74.0832 215.95044 76.0248 215.95044 79.0008C215.95044 79.9716 215.4924 80.5824 214.95792 80.9208C214.02012 81.5316 213.01668 81.5316 211.98084 81.5316C211.04292 81.5316 210.39948 81.5316 209.48364 81.1392C208.03332 80.4948 207.82608 79.59 207.82608 79.5024C207.82608 79.4376 207.86952 79.416 207.93516 79.416C208.10952 79.416 208.36044 79.5684 208.44768 79.6224C208.67676 79.776 208.70916 79.8408 208.7748 80.0484C208.92732 80.484 209.2326 80.8656 210.60672 80.9316C210.43236 78.6528 209.87604 76.5696 209.11296 74.6616C208.70916 74.52 208.44768 74.268 208.44768 74.16C208.44768 74.094 208.4586 74.0832 208.6986 74.0832H209.82168ZM209.87604 74.6832C211.11924 77.7252 211.34832 79.6224 211.50108 80.9316C212.23176 80.9316 215.02332 80.9316 215.02332 78.5328C215.02332 76.3956 213.10428 74.6832 210.46512 74.6832H209.87604Z'/>
+          </g>
+          <path d='M85.425798 107.637008C85.425798 107.914008 85.203098 108.137008 84.925798 108.137008C84.652398 108.137008 84.429698 107.914008 84.429698 107.637008C84.429698 107.363008 84.652398 107.141008 84.925798 107.141008C85.203098 107.141008 85.425798 107.363008 85.425798 107.637008Z'/>
+          <path d='M85.425798 107.637008C85.425798 107.914008 85.203098 108.137008 84.925798 108.137008C84.652398 108.137008 84.429698 107.914008 84.429698 107.637008C84.429698 107.363008 84.652398 107.141008 84.925798 107.141008C85.203098 107.141008 85.425798 107.363008 85.425798 107.637008Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+          <path d='M34.167998 45.238309C34.167998 45.511708 33.945298 45.734409 33.667998 45.734409C33.394498 45.734409 33.171898 45.511708 33.171898 45.238309C33.171898 44.960909 33.394498 44.738309 33.667998 44.738309C33.945298 44.738309 34.167998 44.960909 34.167998 45.238309Z'/>
+          <path d='M34.167998 45.238309C34.167998 45.511708 33.945298 45.734409 33.667998 45.734409C33.394498 45.734409 33.171898 45.511708 33.171898 45.238309C33.171898 44.960909 33.394498 44.738309 33.667998 44.738309C33.945298 44.738309 34.167998 44.960909 34.167998 45.238309Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+          <path d='M11.882798 67.523409C11.882798 67.796909 11.656298 68.023409 11.382798 68.023409C11.109398 68.023409 10.886698 67.796909 10.886698 67.523409C10.886698 67.250008 11.109398 67.027309 11.382798 67.027309C11.656298 67.027309 11.882798 67.250008 11.882798 67.523409Z'/>
+          <path d='M11.882798 67.523409C11.882798 67.796909 11.656298 68.023409 11.382798 68.023409C11.109398 68.023409 10.886698 67.796909 10.886698 67.523409C10.886698 67.250008 11.109398 67.027309 11.382798 67.027309C11.656298 67.027309 11.882798 67.250008 11.882798 67.523409Z' stroke='#000' fill='none' stroke-width='.3985' stroke-miterlimit='10'/>
+          </g>
+          </g>
+          </svg>
+        <p>Pour faire le lien avec la série convergente, il est naturel d'écrire:
+          \[ a_n e^{-\lambda_n z} = a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) } \]
+        </p>
+        <p>Ensuite pour démontrer une convergence uniforme sans pouvoir supposer la convergence simple et sans connaitre la fonction limite, et sans pouvoir passer par la convergence normale, on n'a pas vraiment d'autres outils que le critère de Cauchy uniforme; On va donc s'intéresser à l'expression, pour \(z\in\mathcal{D}\):
+          \[
+          \begin{alignat*}{1}
+          \sum_{n=N}^{N+p} a_n e^{-\lambda_n z}&= \sum_{n=N}^{N+p} a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) }
+          \end{alignat*}\]
+        </p>
+        <p>On ne peut pas majorer directement cette somme car on n'a aucune information sur \(\sum \abs{a_n e^{-\lambda_n z_0}}\). Par contre pour utiliser l'hypothèse de convergence on est poussé à écrire 
+          \[
+          a_n e^{-\lambda_n z_0} = R_n - R_{n+1}
+          \]
+          où 
+          \[R_n = \sum_{k=n}^{+\infty} a_k e^{-\lambda_k z_0}\]
+          et à faire une transformation d'Abel.
+        </p>
+        <p>Posons \(z-z_0=a+i\mkern1mu b\), ce qui permet de traduire facilement par une simple majoration l'appartenance à \(\mathcal{D}\setminus\{z_0\}\)
+          \[z\in \mathcal{D}\setminus\{z_0\} \Leftrightarrow a>0 \land \abs{\frac{b}{a}}\leqslant \tan{\theta_0}\]
+        </p>
+        <p>On fait la transformation d'Abel en "intégrant" \(a_n e^{-\lambda_n z_0}\) et en "dérivant" \(e^{-\lambda_n (z-z_0) }\); \(\forall z\in \mathcal{D}\),
+        \[
+        \begin{alignat*}{1}
+        \sum_{n=N}^{N+p} a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) } &=  \sum_{n=N}^{N+p} (R_n-R_{n+1}) e^{-\lambda_n (z-z_0) } \\
+        &=  \sum_{n=N}^{N+p} R_n e^{-\lambda_n (a+i\mkern1mu b) } - \sum_{n=N}^{N+p} R_{n+1} e^{-\lambda_n (a+i\mkern1mu b) } \\
+        &=  \sum_{n=N}^{N+p} R_n e^{-\lambda_n (a+i\mkern1mu b) } - \sum_{n=N+1}^{N+p+1} R_{n} e^{-\lambda_{n-1} (a+i\mkern1mu b) } \\
+        &=  R_N e^{-\lambda_N (a+i\mkern1mu b) } + \sum_{n=N+1}^{N+p} R_n (e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) } )  - R_{N+p+1} e^{-\lambda_{N+p} (a+i\mkern1mu b) }\\
+        \end{alignat*}
+        \]  
+        </p>
+        <p>Cela a un sens maintenant de prendre le module et de majorer terme à terme:
+          \[
+          \begin{alignat*}{1}
+          \abs{ \sum_{n=N}^{N+p} a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) }} &\leqslant \abs{R_N} e^{-\lambda_N a} + \sum_{n=N+1}^{N+p} \abs{R_n}\abs{ e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) } }  +\abs{ R_{N+p+1}} e^{-\lambda_{N+p} a }  \\
+          \end{alignat*}
+          \]  
+        </p>
+        <p>Soit \(\epsilon>0\) et \(n_0\in\mathbb{N}\) tel que \(\forall n\geqslant n_0,\quad \abs{R_n}\leqslant \epsilon\).</p>
+        <p>Alors, \(\forall N\geqslant n_0\),
+          \[
+          \begin{alignat*}{1}
+          \abs{ \sum_{n=N}^{N+p} a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) }}  &\leqslant \epsilon e^{-\lambda_N a} + \epsilon\sum_{n=N+1}^{N+p} \abs{ e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) } }  +\epsilon e^{-\lambda_{N+p} a }  \\
+          \end{alignat*}
+          \]  
+        </p>
+        <p>La majoration ne doit pas dépendre de \(p\in\mathbb{N}\); comme la suite \((\lambda_n)\) est croissante et \(a>0\) on a:
+          \[
+          \begin{alignat*}{1}
+          \abs{ \sum_{n=N}^{N+p} a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) }}  &\leqslant \epsilon e^{-\lambda_N a} + \epsilon\sum_{n=N+1}^{N+p} \abs{ e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) } }  +\epsilon e^{-\lambda_{N} a }  \\
+          \end{alignat*}
+          \]  
+        </p>
+        <p>Pour majorer la somme, on compare à une intégrale; on remarque que:
+          \[
+          \begin{alignat*}{1}
+          e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) }&= -(a+i\mkern1mu b)\int_{\lambda_{n-1}}^{\lambda_n}e^{-t(a+i\mkern1mu b)}\mathrm{d}t \\
+          \end{alignat*}
+          \] 
+        </p>
+        <p>Et donc,
+          \[
+          \begin{alignat*}{1}
+          \abs{e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) }}&\leqslant \sqrt{a^2+b^2}\int_{\lambda_{n-1}}^{\lambda_n}\abs{e^{-t(a+i\mkern1mu b)}}\mathrm{d}t \\
+          &= \sqrt{a^2+b^2}\int_{\lambda_{n-1}}^{\lambda_n}e^{-ta}\mathrm{d}t \\
+          \end{alignat*}
+          \] 
+        </p>
+        <p>Ensuite,
+          \[
+          \begin{alignat*}{1}
+          \sum_{n=N+1}^{N+p} \abs{ e^{-\lambda_n (a+i\mkern1mu b)}-e^{-\lambda_{n-1} (a+i\mkern1mu b) } } &\leqslant  \sqrt{a^2+b^2}  \sum_{n=N+1}^{N+p}\int_{\lambda_{n-1}}^{\lambda_n}e^{-ta}\mathrm{d}t \\
+          &=  \sqrt{a^2+b^2}  \int_{\lambda_{N}}^{\lambda_{N+p+1}}e^{-ta}\mathrm{d}t \\
+          &\leqslant  \sqrt{a^2+b^2}  \int_{\lambda_{N}}^{+\infty}e^{-ta}\mathrm{d}t \\
+          &=  \sqrt{a^2+b^2}  \frac{1}{a}e^{-\lambda_N a} \\
+          &=  \sqrt{1+(\frac{b}{a})^2} e^{-\lambda_N a} \\
+          &\leqslant  \sqrt{1+(\tan{\theta_0})^2}  \\
+          &=  \frac{1}{\cos{\theta_0}}  \\
+          \end{alignat*}
+          \]  
+        qui est une expression indépendante de \(a\), \(b\) et \(p\).
+        </p>
+        <p>On a montré que, \(\forall N\geqslant n_0,\forall p\in\mathbb{N},\forall z\in\mathcal{D}\setminus\{z_0\}\),
+          \[
+          \begin{alignat*}{1}
+          \abs{ \sum_{n=N}^{N+p} a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) }}  &\leqslant \epsilon(2+\frac{1}{\cos{\theta_0}})
+          \end{alignat*}
+          \] 
+          majoration toujours valable pour \(z=z_0\).
+        </p>
+        <p>La série de fonctions \(\sum a_ne^{-\lambda_n z}\) converge uniformément sur l'ensemble \(\mathcal{D}\).</p>
+      </div>
+    </div>
+        
+
+      </article>
+
+      <hr>
+
       <article class="blog-post" id="comparaison">
         <h2 class="blog-post-title mb-1">Théorèmes de comparaison.</h2>
         <p class="blog-post-meta"><time datetime="2023-08-13">13 Août, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
