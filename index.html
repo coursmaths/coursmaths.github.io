@@ -285,7 +285,7 @@
         </div>
         </p>
         <p>Les séries de Dirichlet correspondent au cas \((\lambda_n)\) non bornée.</p>
-      <!--
+      
       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#indicationsdirichlet" aria-expanded="false" aria-controls="indicationsdirichlet">
         Indications
     </button>
@@ -301,7 +301,8 @@
               </h2>
               <div id="collapse5.0" class="accordion-collapse collapse show" aria-labelledby="headings5.0" data-bs-parent="#accordion5.0">
                 <div class="accordion-body">
-                  <p> Montrer que le nombre de discontinuités de \(f\) sur un segment quelconque \(I\subset\mathbb{R}\) est au plus dénombrable.
+                  <p> Ecrire 
+                    \[ a_n e^{-\lambda_n z} = a_n e^{-\lambda_n z_0 } e^{-\lambda_n (z-z_0) } \]
                   </p>
                 </div>
               </div>
@@ -314,9 +315,7 @@
               </h2>
               <div id="collapse5.1" class="accordion-collapse collapse" aria-labelledby="heading5.1" data-bs-parent="#accordion5.0">
                 <div class="accordion-body">
-                  <p>On peut quantifier la discontinuité en \(x\) par \[d(x)=\lvert l_x^+-f(x) \rvert + \lvert l_x^--f(x) \rvert\] où \(l_x^+=\lim_{\underset{t>x}{t\to x}} f(t)\) et \(l_x^-=\lim_{\underset{t < x}{t\to x}} f(t)\).
-                  </p>
-                  <p>Quel est la valeur maximum de la discontinuité \(d(t)\) pour \(t\in ]x-\alpha_x,x+\alpha_x[\setminus \{x\}\)?</p>
+                  <p>Quel théorème permet de démontrer une convergence uniforme, quand on n'a pas la convergence normale, ni la convergence simple ?</p>
                   <?xml version='1.0' encoding='UTF-8'?>
 
                 </div>
@@ -330,14 +329,43 @@
               </h2>
               <div id="collapse5.2" class="accordion-collapse collapse" aria-labelledby="heading5.2" data-bs-parent="#accordion5.0">
                 <div class="accordion-body">
-                  <p> \[I\subset \bigcup_{x\in I}]x-\alpha_x,x+\alpha_x[\]
+                  <p> On va appliquer le critère de Cauchy uniforme et s'intéresser à la quantité:
+                    \[\sum_{n=N}^{N+p} a_n e^{-\lambda_n z}\]
                   </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading5.3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5.3" aria-expanded="false" aria-controls="collapse5.3">
+                  Indice #4
+                </button>
+              </h2>
+              <div id="collapse5.3" class="accordion-collapse collapse" aria-labelledby="heading5.3" data-bs-parent="#accordion5.0">
+                <div class="accordion-body">
+                  <p> Faire une transformation d'Abel en "intégrant" \(a_n e^{-\lambda_n z_0}\) et en "dérivant" \(e^{-\lambda_n (z-z_0) }\).
+                  </p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading5.4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5.4" aria-expanded="false" aria-controls="collapse5.4">
+                  Indice #5
+                </button>
+              </h2>
+              <div id="collapse5.4" class="accordion-collapse collapse" aria-labelledby="heading5.4" data-bs-parent="#accordion5.0">
+                <div class="accordion-body">
+                  <p>On peut poser \(z-z_0=a+i\mkern1mu b\), ce qui permet de traduire facilement par une simple majoration l'appartenance à \(\mathcal{D}\setminus\{z_0\}\).
+                  </p>
+                  <p> Majorer le module  du paquet de Cauchy par une expression indépendante de \(p,a,b\), qui tend vers 0 quand \(N\to +\infty\).</p>
                 </div>
               </div>
             </div>
           </div>
           </div>    
-      </div>-->
+      </div>
 
       <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#soldirichlet" aria-expanded="false" aria-controls="soldirichlet">
         Solution
@@ -479,6 +507,7 @@
           &= \sqrt{a^2+b^2}\int_{\lambda_{n-1}}^{\lambda_n}e^{-ta}\mathrm{d}t \\
           \end{alignat*}
           \] 
+        Noter que l'ordre des bornes va être essentiel pour appliquer la relation de Chasles.
         </p>
         <p>Ensuite,
           \[
