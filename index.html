@@ -409,7 +409,7 @@
           \]
           revient à trouver une mesure invariante (ou une probabilité si on normalise entre 0 et 1).
         </p>
-        <p>La difficulté vient de la structure du web. La matrice \(M\) contient beaucoup de 0 (sparse), et il y a beaucoup de sites qui n'ont aucun lien sortant et qui sont donc "absorbants" dans la chaine de Markov. On peut montrer que l'équation (2) n'a alors pas de solution "intéressante", c'est à dire une solution avec \(\forall i,\quad s(x_i)>0\): tous les états <em>transitoires</em> de la chaine de Markov auront nécéssairement \(s(x_i)=0\) (voir encadré).</p>
+        <p>La difficulté vient de la structure du web. La matrice \(M\) contient beaucoup de 0 (sparse), et il y a beaucoup de sites qui n'ont aucun lien sortant et qui sont donc "absorbants" dans la chaine de Markov. On peut montrer que l'équation (2) n'a alors pas de solution "intéressante", c'est à dire une solution avec \(\forall i,\quad s(x_i)>0\): tous les états <em>transitoires</em> de la chaine de Markov auront automatiquement \(s(x_i)=0\) (voir encadré).</p>
         <p>L'idée est de modifier les déplacements sur le graphe, en se laissant la possibilité de réinitialiser la chaîne avec une petite probabilité \(\beta\), par exemple \(\beta=0.15\). Plus précisément:
           <ol type="i"> 
             <li>avec la probabilité \(1-\beta\), on suit un lien comme précédemment.</li>
@@ -533,6 +533,7 @@
           \]
         </p>
         <p> La matrice de transition \(\tilde{M}\) définie par \(\tilde{m}_{ij}=\tilde{p}_{ij}\) est irréductible, et on a même \(\tilde{M}^T>0\). Le théorème de Perron s'applique. Comme de plus la matrice \(\tilde{M}\) est stochastique (\(\sum_{j=1}^N m_{ij}=1\)), on peut montrer que \(\rho(\tilde{M}^T)=1\). Le théorème de Perron justifie l'existence d'un vecteur \(X>0\) tel que \(\tilde{M}^TX=X\), et donc en posant \(S=\frac{1}{\sum x_i}X^T\), on a bien \(S>0\) et \(S\tilde{M}=S\). De plus il est clair que la probabilité \(S\) est unique.</p>
+        <h6>Références</h6>
         <p>
           <cite>S. U. Pillai, T. Suel and Seunghun Cha, <br><a href="https://ieeexplore.ieee.org/document/1406483" aria-hidden="true"target="_blank" ><span>The Perron-Frobenius theorem: some of its applications</span></a>,<br>  IEEE Signal Processing Magazine, vol. 22, issue: 2, pp. 62-75, March 2005. </cite>
         </p>
