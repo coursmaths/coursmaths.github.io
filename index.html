@@ -409,7 +409,7 @@
           \]
           revient à trouver une mesure invariante (ou une probabilité si on normalise entre 0 et 1).
         </p>
-        <p>La difficulté vient de la structure du web. La matrice \(M\) contient beaucoup de 0 (sparse), et il y a beaucoup de sites qui n'ont aucun lien sortant et qui sont donc "absorbants" dans la chaine de Markov. On peut montrer que l'équation (2) n'a alors pas de solution "intéressante", c'est à dire une solution avec \(\forall i,\quad s(x_i)>0\): tous les états <em>transitoires</em> de la chaine de Markov auront automatiquement \(s(x_i)=0\) (voir encadré).</p>
+        <p>La difficulté vient de la structure du web. La matrice \(M\) contient beaucoup de 0 (sparse), et il y a beaucoup de sites qui n'ont aucun lien sortant et qui sont donc "absorbants" dans la chaine de Markov. On peut montrer que l'équation (2) n'a alors pas de solution "intéressante", c'est à dire une solution avec \(\forall i,\quad s(x_i)>0\): tous les états <em>transitoires</em> de la chaine de Markov auront automatiquement \(s(x_i)=0\) (voir encadré), ce qui rend la solution inopérante pour classer les pages.</p>
         <p>L'idée est de modifier les déplacements sur le graphe, en se laissant la possibilité de réinitialiser la chaîne avec une petite probabilité \(\beta\), par exemple \(\beta=0.15\). Plus précisément:
           <ol type="i"> 
             <li>avec la probabilité \(1-\beta\), on suit un lien comme précédemment.</li>
