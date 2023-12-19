@@ -31,7 +31,7 @@
     <meta property="og:site_name" content="Cours Maths" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="cours de mathématiques Vincennes Paris cpge classe préparatoires grandes écoles sujets de concours corrigé articles science">
+    <meta name="description" content="Cours de Mathématiques à Vincennes et Paris, en classes préparatoires grandes écoles, lycée. Sujets de concours corrigés et articles scientifiques.">
     <meta name="author" content="">
     <meta name="generator" content="">
     <title>Cours de Mathématiques Paris Vincennes</title>
@@ -274,10 +274,11 @@
       <hr>
       <article class="blog-post" id="pagerank">
         <h2 class="blog-post-title mb-1">Google Page Rank.</h2>
-        <p class="blog-post-meta"><time datetime="2023-10-17">17 Octobre, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
+        <p class="blog-post-meta"><time datetime="2023-10-17">17 Octobre, 2023</time>, mis à jour le <time datetime="2023-12-19">19 Décembre, 2023</time> par <a href="#">Pierre-Paul T.</a></p>
         <p>Dans ce <a href="#maths1pccs23">sujet</a> de Centrale Supelec, on étudiait le théorème de Perron-Frobenius. Ce théorème a de nombreuses applications, dont l'une est au coeur du moteur de recherche Google.</p>
         <p>On note \(M>0\) si \(\forall i,j,\quad m_{ij}>0\) et \(\rho(A)=\max\{\abs{\lambda},\quad \lambda\in \mathrm{Sp}(A)\}\in\mathbb{R}^+\).
-        <div class="card">
+          
+          <div class="card">
           <div class="card-header">
             Théorème de Perron
           </div>
@@ -540,6 +541,31 @@
         <p>
           <cite>Sergey Brin, Lawrence Page, <br><a href="http://infolab.stanford.edu/pub/papers/google.pdf" aria-hidden="true"target="_blank" ><span>The Anatomy of a Large-Scale Hypertextual Web Search Engine</span></a>,<br>  Computer Networks, vol. 30, pp. 107-117, 1998. </cite>
         </p>
+
+        <div class="card text-dark bg-light mb-3" >
+          <div class="card-body">
+            <h5 class="card-title">Quelques notions sur les chaines de Markov</h5>
+        <p class="card-text"> \(E\) est un espace fini ou infini au plus dénombrable. \(X\) est une chaîne de Markov homogène de matrice de transition \(M\).</p>
+        <p class="card-text"> Pour tout \(x\in E\) tel que \(P(X_0=x)>0\), on note 
+          \[
+          P_x=P(.\mid X_0=x)
+          \]
+          la loi de probabilité conditionnée à l'évènement \(X_0=x\). 
+        </p>
+        <p class="card-text">Pour \(y\in E\), on définit <em>le temps de première arrivée</em> en \(y\) par 
+          \[
+          T_y=\inf\{n\in \mathbb{N}^*, X_n=y\}
+          \]
+          avec la convention \(\inf \emptyset = +\infty\)
+        </p>
+        <p class="card-text">On dit que \(x\) conduit à \(y\) si \(P_x(T_y < +\infty)>0\)</p>
+        <p>On dit que les états \(x\) et \(y\) communiquent si  \(x\) conduit à \(y\) et  \(y\) conduit à \(x\). C'est une relation d'équivalence.</p>
+        <p class="card-text">Une chaîne est <em>irréductible</em> si tous les états communiquent.</p>
+        <p class="card-text">un état \(x\) est <em>récurrent</em> si \(P_x(T_x<+\infty)=1\).</p>
+        <p class="card-text">un état \(x\) est <em>transitoire</em> si \(P_x(T_x<+\infty)<1\).</p>
+        <p class="card-text"> 
+        </p>
+          </div></div>
       </article>
 
       <hr>
