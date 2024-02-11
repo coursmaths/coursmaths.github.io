@@ -23,14 +23,24 @@
 
         
       const button = document.getElementById('button');
-      document.getElementById('spinner1');
+      /*spinner1 = document.getElementById('spinner1');
       spinner1.style.visibility = 'hidden';
-      spinner1.style.display = 'none' ;
+      spinner1.style.display = 'none' ;*/
+      
   
       button.addEventListener("click", async function(e) {
-
+        svganimation = document.getElementById('blochsvg');
+        svganimation.style.display = 'block';
+       
+        if(this.textContent == "Afficher"){
+          this.textContent = 'Cacher';
+        }
+        else{
+          this.textContent = 'Afficher';
+        }
         /*spinner1 = document.getElementById('spinner1');
-        spinner1.style.visibility = 'visible';*/
+        spinner1.style.visibility = 'visible';
+        spinner1.style.display = 'block';
         svganimation = document.getElementById('blochsvg');
         if(svganimation.style.display == 'block'){
 
@@ -46,7 +56,7 @@
         //spinner1.style.visibility = 'hidden';
         this.textContent = "Cacher";
 
-        }
+        }*/
         
       });
      
@@ -386,12 +396,15 @@
         <div class="card-body">
           <h5 class="card-title">Sphère de Bloch</h5>
           <p class="card-text">L'ensemble des qubits se visualise à l'aide de la sphère unité de \(\mathbb{R}^3\).</p>
-          <button class="btn btn-primary" type="button"  id="button">
+          <!--<button class="btn btn-primary" type="button"  id="button">
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"  id="spinner1"></span>
             Afficher
-          </button>
-        </div>
+          </button>-->
 
+          <button id="button" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#dem33" aria-expanded="false" aria-controls="dem33">Afficher</button>
+        
+        </div>
+        <div class="collapse" id="dem33">
         <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%'  viewBox='-72.000004 -72.000005 396.850192 396.850192' display="none" id="blochsvg">
           <text font-size="small">Bloch sphere</text>
           <defs>
@@ -44755,7 +44768,7 @@
         </defs>
         <path class='annot' cursor='pointer' d='M-72.000004 324.850186L324.850186 324.850186L324.850186 -72.000004L-72.000004 -72.000004Z' id='anm0' opacity='0'/>
         </g>
-        </svg>
+        </svg></div>
       </div>
 
 
