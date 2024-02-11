@@ -32,17 +32,19 @@
         /*spinner1 = document.getElementById('spinner1');
         spinner1.style.visibility = 'visible';*/
         svganimation = document.getElementById('blochsvg');
-        if(svganimation.style.display == 'none'){
+        if(svganimation.style.display == 'block'){
 
-        
-        svganimation.style.display = 'block';
-        //spinner1.style.visibility = 'hidden';
-        this.textContent = "Cacher";
-        }
-        else{
-        svganimation.style.display = 'none';
+          svganimation.style.display = 'none';
         //spinner1.style.visibility = 'hidden';
         this.textContent = "Afficher";
+
+        
+        
+        }
+        else{
+          svganimation.style.display = 'block';
+        //spinner1.style.visibility = 'hidden';
+        this.textContent = "Cacher";
 
         }
         
