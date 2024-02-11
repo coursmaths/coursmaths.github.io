@@ -26,19 +26,38 @@
       /*spinner1 = document.getElementById('spinner1');
       spinner1.style.visibility = 'hidden';
       spinner1.style.display = 'none' ;*/
+
+      const collapseElmt = document.getElementById('dem33');
+
+      collapseElmt.addEventListener('shown.bs.collapse', function(e) {
+        const button = document.getElementById('button');
+        button.textContent = 'Cacher';
+
+      });
+
+      collapseElmt.addEventListener('hidden.bs.collapse', function(e) {
+        const button = document.getElementById('button');
+        button.textContent = 'Afficher';
+      });
+
+      
       
   
-      button.addEventListener("click", async function(e) {
+      button.addEventListener("click",  function(e) {
         svganimation = document.getElementById('blochsvg');
         svganimation.style.display = 'block';
+
+        /*const collapseElmt = document.getElementById('dem33');
+        var isExpanded = collapseElmt.attr("aria-expanded");
        
-        if(this.textContent == "Afficher"){
-          this.textContent = 'Cacher';
-        }
-        else{
+        if(isExpanded){
           this.textContent = 'Afficher';
         }
-        /*spinner1 = document.getElementById('spinner1');
+        else{
+          this.textContent = 'Cacher';
+        }
+
+        spinner1 = document.getElementById('spinner1');
         spinner1.style.visibility = 'visible';
         spinner1.style.display = 'block';
         svganimation = document.getElementById('blochsvg');
@@ -396,7 +415,7 @@
         <div class="card-body">
           <h5 class="card-title">Sphère de Bloch</h5>
           <p class="card-text">L'ensemble des qubits se visualise à l'aide de la sphère unité de \(\mathbb{R}^3\).</p>
-          <!--<button class="btn btn-primary" type="button"  id="button">
+          <!--<button class="btn btn-primary" type="button"  id="button345">
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"  id="spinner1"></span>
             Afficher
           </button>-->
