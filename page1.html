@@ -22,63 +22,6 @@
       window.addEventListener("load", function() {
 
         
-      const button = document.getElementById('button');
-      /*spinner1 = document.getElementById('spinner1');
-      spinner1.style.visibility = 'hidden';
-      spinner1.style.display = 'none' ;*/
-
-      const collapseElmt = document.getElementById('dem33');
-
-      collapseElmt.addEventListener('shown.bs.collapse', function(e) {
-        const button = document.getElementById('button');
-        button.textContent = 'Cacher';
-
-      });
-
-      collapseElmt.addEventListener('hidden.bs.collapse', function(e) {
-        const button = document.getElementById('button');
-        button.textContent = 'Afficher';
-      });
-
-      
-      
-  
-      button.addEventListener("click",  function(e) {
-        svganimation = document.getElementById('blochsvg');
-        svganimation.style.display = 'block';
-
-        /*const collapseElmt = document.getElementById('dem33');
-        var isExpanded = collapseElmt.attr("aria-expanded");
-       
-        if(isExpanded){
-          this.textContent = 'Afficher';
-        }
-        else{
-          this.textContent = 'Cacher';
-        }
-
-        spinner1 = document.getElementById('spinner1');
-        spinner1.style.visibility = 'visible';
-        spinner1.style.display = 'block';
-        svganimation = document.getElementById('blochsvg');
-        if(svganimation.style.display == 'block'){
-
-          svganimation.style.display = 'none';
-        //spinner1.style.visibility = 'hidden';
-        this.textContent = "Afficher";
-
-        
-        
-        }
-        else{
-          svganimation.style.display = 'block';
-        //spinner1.style.visibility = 'hidden';
-        this.textContent = "Cacher";
-
-        }*/
-        
-      });
-     
       });
       </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -2442,7 +2385,7 @@ aKrGTmimB7aDTw1QA04GoEWA2acDUAanhqAJg1PBqEGnA0hkoNOBqINTgaAJAacDUeaXNAEgNOzUQanA
 imZpc0AOzRmm5o3UAPzRmm7qN1ADs0ZpuaM0AOzRmm5ozQA7NGabmjNADs0ZpuaM0AOzRmm7qN1ADs0mabmjNADqM03NJmgB+aTNNzRmgB2aTNNzRmgB2aTNNzSbqAHZozTN1JmmA/dTS1NozQAuaKbmkzQA6kLU3NJmgQ7NITTS1NzQA8tTSabmkzQA7NJmm5pM0CHE
 00mkJppNMBxNNJpCaaTQA4mmk00tSZoAUmkJppamlqYDiaYTSFqYWzQA4tTCaQmmlqBCk0wtSFqYTQApamFqQtTC1MBSaYWpC1RlqAFLUwn1pCcVEz0AOZ6iLUjNioWegBzPULvTWeoWagBWaomekZs1Ez4pgKzYqF3pGeoHfNACu9QO9DvVd3oAV3xVZ3od6ru9AxXe
 q7vSO9V3emApfniiqxfmigD3YNTw1Vw1PDVAicGnhqgDU8GgCYNTw1QA08NQBMDTgahDU4NQMmDU4GoQacDSAmzS5qINTgaAJA1OBzUWaXNAEuaXNRhqcGoAfmlzTM0uaAH5p2aizS5oAlzS5qLNOzSGSZpd1R5pc0ASbqXNRZpc0ASUZpmaXdQMfml3UzdRmgCTdRkU
-zNFAEmaM1HmlzQBJmjNR7jS7qLAP3Uu6o91LuoAfmjNM3CjIpAPzRmmZFLketADs0uRTM+9GfegB+RRkUzPvRn3oAdmjNMyPWjIoAfmjNM3CjdTAfmkzTN1G6iwD80Zpm6kzQA/NG6mZpM0AP3UmabmjNAC5ozTc0m6gB2aM0zNJmgQ/NJmm5pM0AOzSbqbmkzQA7NJm
+zNFAEmaM1HmlzQBJmjNR7jS7qLAP3Uu6o91LujoioAfmjNM3CjIpAPzRmmZFLketADs0uRTM+9GfegB+RRkUzPvRn3oAdmjNMyPWjIoAfmjNM3CjdTAfmkzTN1G6iwD80Zpm6kzQA/NG6mZpM0AP3UmabmjNAC5ozTc0m6gB2aM0zNJmgQ/NJmm5pM0AOzSbqbmkzQA7NJm
 m5pKAHZpM03NITQIdmkzTc03NADiaTNNzSE0wHZppNJmkJoAUmm5pC1MLUAOLU0tSE00tTAUmmlqaWppNADiaaWppamE0CHFqYWppamFqYDi1NLU0tTC1IBxaoy1IWphamApamM2Kaz1EzUAOZ6iZ6az+lRO+KAHM9QM+aRmzUTP6UwFZsVEzUjNUTPQArPULvikd8VA
 z0AKz5qFnpHeoHegYrvVd3pHeoHegAd6ru9DyVWeSmASSVXd80jvURagBSeaKZRSuVY92DU4Gq6vUgapIJw1PDVADTg1AFgNTwarhqeGoAnDU4NUAanhqAJg1ODVCGpwNAEwNOBqEGnBqBkwanA1CGpQaAJs0uaiDU4NQBIDinBqizS5pAS5pc1FmnbqAJM0uajDUuaA
 H5pc0zNGaAJM0uajzS5pASZpc1HmlzQMfmlzUeaXNAD80uajzS5oAfupd1MzRmgCTdRmo80uaAH5pcio6M0ASZoz70zJoyaAH0UzNGaAH0UzNGaAH0UzNGaAH0UzNGaAH0ZpmaMmgB+aTNMzRn3oAfmjdUeaM0AP3Um6m5pM0APzSZpuaTdQA/NJmmZpM0APzSbqbmkz
