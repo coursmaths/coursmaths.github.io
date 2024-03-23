@@ -1,32 +1,27 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head>
-    <!--<script src="../assets/js/color-modes.js"></script>-->
+
     <script src="https://kit.fontawesome.com/6b81810417.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       MathJax = {
-    loader: {
-        load: ['[unicodeMath]/unicode-math.js','[tex]/physics'],
-        paths: {unicodeMath: 'https://cdn.jsdelivr.net/npm/@amermathsoc/mathjax-unicode-math@1/browser'}
-    },
-    tex: {
-        packages: {'[+]': ['unicode-math','physics']}
-    },
-    jax: ["input/TeX","output/SVG"],
-    svg: {
-    fontCache: 'global'
-  }
-};   
+        loader: {
+          load: ['[unicodeMath]/unicode-math.js','[tex]/physics'],
+          paths: {unicodeMath: 'https://cdn.jsdelivr.net/npm/@amermathsoc/mathjax-unicode-math@1/browser'}
+        },
+        tex: {
+          packages: {'[+]': ['unicode-math','physics']}
+        },
+        jax: ["input/TeX","output/SVG"],
+        svg: {
+          fontCache: 'global'
+        }
+      };   
     </script>
     <script type="text/javascript">
       window.addEventListener("load", function() {
 
-        
       const button = document.getElementById('button');
-      /*spinner1 = document.getElementById('spinner1');
-      spinner1.style.visibility = 'hidden';
-      spinner1.style.display = 'none' ;*/
-
       const collapseElmt = document.getElementById('dem33');
 
       collapseElmt.addEventListener('shown.bs.collapse', function(e) {
@@ -40,55 +35,78 @@
         button.textContent = 'Afficher';
       });
 
-      
-      
+      const carousel = document.getElementById('carousel')
+
+/*       carousel.addEventListener('slide.bs.carousel', event => {
+
+        console.log(event.from);
+        console.log(event.to);
+
+        const inner = document.getElementById('carousel').getElementsByClassName('carousel-inner');
+        console.log(inner[0]);
+        const dom = inner[0];
+        var hstring = inner[0].children.item(event.from).children.item(0).offsetHeight.toString() + "px";
+        var old = inner[0].children.item(event.to).children.item(0).getAttribute("style");
+        inner[0].children.item(event.to).children.item(0).setAttribute("style", old + "; height:"+hstring) ;
+        console.log(inner[0].children.item(0).children.item(0).offsetHeight.toString() + "px");
+        console.log(inner[0].children.item(1).children.item(0).offsetHeight.toString() + "px");
+
+        console.log(inner[0].children.item(2).children.item(0).offsetHeight.toString() + "px");
+        console.log(hstring);
+
+
+});
+
+window.addEventListener('resize', function(event){
+
+  const inner = document.getElementById('carousel').getElementsByClassName('carousel-inner');
+        console.log(inner[0]);
+        const dom = inner[0];
+
+  for(item of dom.children){
+    item.children.item(0).style.removeProperty("height");
+  }
   
+}); */
+
       button.addEventListener("click",  function(e) {
         svganimation = document.getElementById('blochsvg');
         svganimation.style.display = 'block';
 
         /*const collapseElmt = document.getElementById('dem33');
         var isExpanded = collapseElmt.attr("aria-expanded");
-       
         if(isExpanded){
           this.textContent = 'Afficher';
         }
         else{
           this.textContent = 'Cacher';
         }
-
         spinner1 = document.getElementById('spinner1');
         spinner1.style.visibility = 'visible';
         spinner1.style.display = 'block';
         svganimation = document.getElementById('blochsvg');
         if(svganimation.style.display == 'block'){
-
           svganimation.style.display = 'none';
         //spinner1.style.visibility = 'hidden';
         this.textContent = "Afficher";
-
-        
-        
         }
         else{
           svganimation.style.display = 'block';
         //spinner1.style.visibility = 'hidden';
         this.textContent = "Cacher";
-
         }*/
         
       });
      
       });
-      </script>
+    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <!--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
-<script type="text/javascript" id="MathJax-script" defer
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
+    <script type="text/javascript" id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+    <meta http-equiv="Refresh" content="0; url=bitsflip.io" />
     <meta property="og:description" 
         content="Cours de Mathématiques à Vincennes et Paris, en classes préparatoires grandes écoles, lycée. Sujets de concours corrigés et articles scientifiques." />
-  <meta property="og:determiner" content="the" />
+    <meta property="og:determiner" content="the" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:locale:alternate" content="en_EN" />
     <meta property="og:site_name" content="Cours Maths" />
@@ -97,16 +115,12 @@
     <meta name="description" content="Cours de Mathématiques à Vincennes et Paris, en classes préparatoires grandes écoles, lycée. Sujets de concours corrigés et articles scientifiques.">
     <meta name="author" content="">
     <meta name="generator" content="">
+    
     <title>Cours de Mathématiques Paris Vincennes</title>
-
+    
     <link rel="canonical" href="https://coursmaths.github.io">
-
-    
-
-    
     <script src="js/bootstrap.bundle.min.js"></script>
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       mjx-container {
@@ -147,6 +161,7 @@
         vertical-align: -.125em;
         fill: currentColor;
       }
+      
 
       .nav-scroller {
         position: relative;
@@ -186,13 +201,11 @@
         z-index: 1500;
       }
     </style>
-
-    
-    <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="blog.css" rel="stylesheet">
+    
   </head>
+  
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -283,13 +296,38 @@
 </div>
 
 <main class="container">
-  <div class="p-4 p-md-5 mb-4 rounded text-bg-dark" style="background-image: url('DSC_0110.webp');background-size: cover;">
-    <div class="col-md-6 px-0" >
-      <h1 class="display-4 fst-italic">Cours de mathématiques</h1>
-      <p class="lead my-3">Je donne des cours particuliers à domicile en mathématiques et physique-chimie, niveau lycée et enseignement supérieur.</p>
-      <p class="lead mb-0"><a href="page1.html#présentation" class="text-white fw-bold">Continuer la lecture...</a></p>
+
+
+  <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <div class="p-4 p-md-5 mb-4 rounded text-bg-dark" style="background-image: url('DSC_0110.webp');background-size: cover;">
+          <div class="col-md-6 px-0" >
+            <h1 class="display-4 fst-italic">Cours de mathématiques</h1>
+            <p class="lead my-3">Je donne des cours particuliers à domicile en mathématiques et physique-chimie, niveau lycée et enseignement supérieur.</p>
+            <p class="lead mb-0"><a href="page1.html#présentation" class="text-white fw-bold">Continuer la lecture...</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item " >
+        <div class="p-4 p-md-5 mb-4 rounded text-bg-dark" style="background-image: url('header.webp');background-size: cover;">
+          <div class="col-md-6 px-0" >
+            <h1 class="display-4 fst-italic">Quantum bit <span style="visibility: hidden;display: inline-block">matiques</span></h1>
+            <p class="lead my-3">Découvrez le quantum bit en quelques minutes.<span style="visibility: hidden;display: inline-block;">en mathématiques et physique-cilycée et enseignement supérieur.</span></p>
+            <p class="lead mb-0"><a href="#qubit" class="text-white fw-bold">Continuer la lecture...</a></p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> 
 
   <div class="row mb-2">
     <div class="col-md-6">
@@ -311,7 +349,7 @@
     </div>
     <div class="col-md-6" >
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative " >
-        <div class="col p-4 d-flex flex-column position-static">
+        <div class="col p-4 d-flex flex-column position-static" >
           <strong class="d-inline-block mb-2 text-primary">Concours X ENS</strong>
           <h3 class="mb-0">mathématiques A MP</h3>
           <div class="mb-1 text-body-secondary">5 Juin</div>
@@ -423,6 +461,8 @@
         
         </div>
         <div class="collapse" id="dem33">
+          
+
         <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%'  viewBox='-72.000004 -72.000005 396.850192 396.850192' display="none" id="blochsvg">
           <text font-size="small">Bloch sphere</text>
           <defs>
@@ -48974,26 +49014,25 @@
 </div>
 
 <footer class="blog-footer">
-          <section>
-          <header>
-            <h3>Contact</h3>
-          </header>
-          <ul class="contact">
-            <li><a href="https://github.com/pptacher" class="fa fa-github" target="_blank"><span>Github</span></a></li>
-            <li><a href="https://twitter.com/coursmathsparis" class="fa fa-twitter" target="_blank"><span>Twitter</span></a></li>
-            <li><a href="form.html" class="fa fa-envelope" aria-hidden="true" ><span>Mail</span></a></li>
-                       <!--< <li><a href="form.html" class="fab fa-discord" aria-hidden="true" ><span>Mail</span></a></li>-->
-          </ul>
-        </section class="credits">
-  <p>Image: <a class="fa-brands fa-unsplash" href="https://unsplash.com/@waqvr?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" aria-hidden="true" target="_blank"><span>Unsplash</span></a></p>
-  <p>
+  <section>
+    <header>
+      <h3>Contact</h3>
+    </header>
+    <ul class="contact">
+      <li><a href="https://github.com/pptacher" class="fa fa-github" target="_blank"><span>Github</span></a></li>
+      <li><a href="https://twitter.com/coursmathsparis" class="fa fa-twitter" target="_blank"><span>Twitter</span></a></li>
+      <li><a href="form.html" class="fa fa-envelope" aria-hidden="true" ><span>Mail</span></a></li>
+       <!--< <li><a href="form.html" class="fab fa-discord" aria-hidden="true" ><span>Mail</span></a></li>-->
+    </ul>
+  </section>
+  <section class="credits">
+    <p>Image: <a class="fa-brands fa-unsplash" href="https://unsplash.com/@waqvr?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" aria-hidden="true" target="_blank"><span>Unsplash</span></a></p>
+    <p>
     <a href="#">Back to top</a>
-  </p>
+    </p>
 </footer>
 
-
-    
-  </body>
+</body>
       <script>
        
 
